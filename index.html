@@ -14,18 +14,12 @@
     </style>
 </head>
 <body class="bg-linear-to-br from-teal-50 via-slate-50 to-emerald-50 text-slate-800 font-sans antialiased min-h-screen">
-    <!-- BACKGROUND -->
     <div class="fixed inset-0 -z-10 overflow-hidden">
-
         <div class="absolute inset-0 bg-gradient-to-br from-[#f7f9f9] via-[#eef7f5] to-[#f5fffc]"></div>
-
         <div class="absolute -right-40 top-40 w-[600px] h-[600px] bg-teal-100 rounded-full opacity-40 blur-3xl"></div>
-
         <div class="absolute -left-32 bottom-0 w-[400px] h-[400px] bg-emerald-100 rounded-full opacity-30 blur-3xl"></div>
 
-        <!-- DOTS -->
         <div class="absolute top-28 right-[28%] grid grid-cols-4 gap-3 opacity-20">
-
             <div class="w-2 h-2 bg-teal-400 rounded-full"></div>
             <div class="w-2 h-2 bg-teal-400 rounded-full"></div>
             <div class="w-2 h-2 bg-teal-400 rounded-full"></div>
@@ -40,21 +34,37 @@
             <div class="w-2 h-2 bg-teal-400 rounded-full"></div>
             <div class="w-2 h-2 bg-teal-400 rounded-full"></div>
             <div class="w-2 h-2 bg-teal-400 rounded-full"></div>
-
         </div>
     </div>
+
     <nav class="sticky top-0 z-50 bg-white/60 backdrop-blur-lg shadow-xs border-b border-teal-100/30">
         <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
             <span class="text-xl font-bold text-teal-700 tracking-wide">Achievement Portfolio</span>
+            
             <div class="hidden md:flex space-x-8 text-sm font-medium text-slate-600">
                 <a href="#tentang" class="hover:text-teal-700 transition">Tentang</a>
                 <a href="#pendidikan" class="hover:text-teal-700 transition">Pendidikan</a>
                 <a href="#pengalaman" class="hover:text-teal-700 transition">Pengalaman</a>
                 <a href="#organisasi" class="hover:text-teal-700 transition">Organisasi</a>
                 <a href="#keahlian" class="hover:text-teal-700 transition">Keahlian</a>
-                <a href="#sertifikasi" class="hover:text-teal-700 transition">Sertifikasi & Lisensi</a>
-                <a href="#galeri" class="hover:text-teal-700 transition">Galeri & Pencapaian</a>
+                <a href="#sertifikasi" class="hover:text-teal-700 transition">Sertifikasi</a>
+                <a href="#galeri" class="hover:text-teal-700 transition">Galeri</a>
             </div>
+
+            <button id="menu-btn" class="md:hidden text-slate-600 hover:text-teal-700 focus:outline-hidden text-xl cursor-pointer">
+                <i id="menu-icon" class="fa-solid fa-bars"></i>
+                <span class="sr-only">Buka Menu Navigasi</span>
+            </button>
+        </div>
+
+        <div id="mobile-menu" class="hidden md:hidden bg-white/90 backdrop-blur-md border-b border-teal-100/50 px-6 py-4 space-y-3 font-medium text-sm text-slate-600">
+            <a href="#tentang" class="block hover:text-teal-700 transition mobile-link">Tentang</a>
+            <a href="#pendidikan" class="block hover:text-teal-700 transition mobile-link">Pendidikan</a>
+            <a href="#pengalaman" class="block hover:text-teal-700 transition mobile-link">Pengalaman</a>
+            <a href="#organisasi" class="block hover:text-teal-700 transition mobile-link">Organisasi</a>
+            <a href="#keahlian" class="block hover:text-teal-700 transition mobile-link">Keahlian</a>
+            <a href="#sertifikasi" class="block hover:text-teal-700 transition mobile-link">Sertifikasi & Lisensi</a>
+            <a href="#galeri" class="block hover:text-teal-700 transition mobile-link">Galeri & Pencapaian</a>
         </div>
     </nav>
 
@@ -117,39 +127,19 @@
                 <a href="tel:+6285769791588" class="flex items-center gap-2 hover:text-teal-700 transition"><i class="fa-solid fa-phone text-teal-700"></i> 0857-xxxx-xxxx</a>
             </div>
         </div>
+        
         <div class="flex justify-center order-1 md:order-2">
-
             <div class="relative w-80 h-[480px]">
-
                 <div class="absolute -top-6 -left-6 w-24 h-24 border-4 border-teal-100 rounded-3xl"></div>
-
                 <div class="relative w-full h-full rounded-[40px] overflow-hidden border-4 border-white shadow-2xl bg-gradient-to-br from-teal-500 to-emerald-400 flex items-center justify-center">
-
                     <div class="absolute -right-20 -bottom-20 w-60 h-60 bg-white/10 rounded-full"></div>
-
                     <div class="text-center text-white z-10">
-
-                        <h1 class="text-8xl font-black tracking-widest">
-                            AA
-                        </h1>
-
-                        <p class="mt-4 text-lg font-medium opacity-90">
-                            Public Health Student
-                        </p>
-
+                        <h1 class="text-8xl font-black tracking-widest">AA</h1>
+                        <p class="mt-4 text-lg font-medium opacity-90">Public Health Student</p>
                     </div>
                 </div>
             </div>
         </div>
-
-        <!-- <div class="flex justify-center order-1 md:order-2">
-            <div class="relative group w-64 h-64 md:w-80 md:h-80">
-                <div class="absolute -inset-4 bg-teal-500/10 rounded-full blur-2xl"></div>
-                <div class="w-full h-full bg-linear-to-tr from-teal-700/90 to-emerald-500/90 rounded-3xl shadow-xl overflow-hidden border-4 border-white/80 flex items-center justify-center text-white">
-                    <span class="text-7xl font-black tracking-wider opacity-90">AA</span>
-                </div>
-            </div>
-        </div> -->
     </header>
 
     <section id="pendidikan" class="max-w-6xl mx-auto px-6 py-16 border-t border-teal-500/10 scroll-mt-16">
@@ -320,13 +310,13 @@
             </div>
         </div>
     </section>
-<section id="sertifikasi" class="max-w-6xl mx-auto px-6 py-16 border-t border-teal-500/10 scroll-mt-16">
+
+    <section id="sertifikasi" class="max-w-6xl mx-auto px-6 py-16 border-t border-teal-500/10 scroll-mt-16">
         <div class="mb-10">
             <h2 class="text-2xl md:text-3xl font-bold text-slate-950">Sertifikasi & Seminar</h2>
             <p class="text-sm text-slate-500 mt-1">Sertifikat resmi dan pengembangan diri profesional yang telah diselesaikan.</p>
         </div>
         <div class="grid md:grid-cols-2 gap-4">
-            
             <div class="flex gap-4 bg-white/40 backdrop-blur-md p-4 rounded-2xl border border-white/60 shadow-2xs hover:bg-white/60 transition">
                 <div class="text-teal-700 bg-teal-500/10 w-10 h-10 rounded-xl flex items-center justify-center shrink-0 text-lg">
                     <i class="fa-solid fa-award"></i>
@@ -389,7 +379,7 @@
             </div>
         </div>
     </section>
-    <section id="galeri" class="border-t border-teal-500/10 py-16 scroll-mt-16">
+<section id="galeri" class="border-t border-teal-500/10 py-16 scroll-mt-16">
         <div class="max-w-6xl mx-auto px-6">
             <div class="text-center max-w-xl mx-auto mb-12">
                 <h2 class="text-2xl md:text-3xl font-bold text-slate-950">Galeri Aktivitas & Pencapaian</h2>
@@ -397,6 +387,7 @@
             </div>
 
             <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+
                 
                 <div class="bg-white/40 backdrop-blur-md rounded-2xl overflow-hidden border border-white/60 shadow-2xs flex flex-col justify-between hover:bg-white/50 transition">
                     <div class="h-44 bg-teal-900/80 flex items-center justify-center text-teal-100 relative">
@@ -409,6 +400,7 @@
                     </div>
                 </div>
 
+                
                 <div class="bg-white/40 backdrop-blur-md rounded-2xl overflow-hidden border border-white/60 shadow-2xs flex flex-col justify-between hover:bg-white/50 transition">
                     <div class="h-44 bg-teal-900/80 flex items-center justify-center text-teal-100 relative">
                         <i class="fa-solid fa-kit-medical text-3xl opacity-30"></i>
@@ -420,6 +412,7 @@
                     </div>
                 </div>
 
+                
                 <div class="bg-white/40 backdrop-blur-md rounded-2xl overflow-hidden border border-white/60 shadow-2xs flex flex-col justify-between hover:bg-white/50 transition">
                     <div class="h-44 bg-teal-900/80 flex items-center justify-center text-teal-100 relative">
                         <i class="fa-solid fa-medal text-3xl opacity-30"></i>
@@ -431,6 +424,7 @@
                     </div>
                 </div>
 
+                
                 <div class="bg-white/40 backdrop-blur-md rounded-2xl overflow-hidden border border-white/60 shadow-2xs flex flex-col justify-between hover:bg-white/50 transition">
                     <div class="h-44 bg-teal-900/80 flex items-center justify-center text-teal-100 relative">
                         <i class="fa-solid fa-child text-3xl opacity-30"></i>
@@ -442,6 +436,7 @@
                     </div>
                 </div>
 
+                
                 <div class="bg-white/40 backdrop-blur-md rounded-2xl overflow-hidden border border-white/60 shadow-2xs flex flex-col justify-between hover:bg-white/50 transition">
                     <div class="h-44 bg-teal-900/80 flex items-center justify-center text-teal-100 relative">
                         <i class="fa-solid fa-trophy text-3xl opacity-30"></i>
@@ -453,6 +448,7 @@
                     </div>
                 </div>
 
+                
                 <div class="bg-white/40 backdrop-blur-md rounded-2xl overflow-hidden border border-white/60 shadow-2xs flex flex-col justify-between hover:bg-white/50 transition">
                     <div class="h-44 bg-teal-900/80 flex items-center justify-center text-teal-100 relative">
                         <i class="fa-solid fa-chalkboard-user text-3xl opacity-30"></i>
@@ -464,6 +460,7 @@
                     </div>
                 </div>
 
+                
                 <div class="bg-white/40 backdrop-blur-md rounded-2xl overflow-hidden border border-white/60 shadow-2xs flex flex-col justify-between hover:bg-white/50 transition">
                     <div class="h-44 bg-teal-900/80 flex items-center justify-center text-teal-100 relative">
                         <i class="fa-solid fa-users-gear text-3xl opacity-30"></i>
@@ -475,6 +472,7 @@
                     </div>
                 </div>
 
+                
                 <div class="bg-white/40 backdrop-blur-md rounded-2xl overflow-hidden border border-white/60 shadow-2xs flex flex-col justify-between hover:bg-white/50 transition">
                     <div class="h-44 bg-teal-900/80 flex items-center justify-center text-teal-100 relative">
                         <i class="fa-solid fa-id-card text-3xl opacity-30"></i>
@@ -486,6 +484,7 @@
                     </div>
                 </div>
 
+                
                 <div class="bg-white/40 backdrop-blur-md rounded-2xl overflow-hidden border border-white/60 shadow-2xs flex flex-col justify-between hover:bg-white/50 transition">
                     <div class="h-44 bg-teal-900/80 flex items-center justify-center text-teal-100 relative">
                         <i class="fa-solid fa-house-medical text-3xl opacity-30"></i>
@@ -497,6 +496,7 @@
                     </div>
                 </div>
 
+                
                 <div class="bg-white/40 backdrop-blur-md rounded-2xl overflow-hidden border border-white/60 shadow-2xs flex flex-col justify-between hover:bg-white/50 transition">
                     <div class="h-44 bg-teal-900/80 flex items-center justify-center text-teal-100 relative">
                         <i class="fa-solid fa-hospital-user text-3xl opacity-30"></i>
@@ -508,6 +508,7 @@
                     </div>
                 </div>
 
+                
                 <div class="bg-white/40 backdrop-blur-md rounded-2xl overflow-hidden border border-white/60 shadow-2xs flex flex-col justify-between hover:bg-white/50 transition">
                     <div class="h-44 bg-teal-900/80 flex items-center justify-center text-teal-100 relative">
                         <i class="fa-solid fa-user-shield text-3xl opacity-30"></i>
@@ -519,6 +520,7 @@
                     </div>
                 </div>
 
+                
                 <div class="bg-white/40 backdrop-blur-md rounded-2xl overflow-hidden border border-white/60 shadow-2xs flex flex-col justify-between hover:bg-white/50 transition">
                     <div class="h-44 bg-teal-900/80 flex items-center justify-center text-teal-100 relative">
                         <i class="fa-solid fa-user-group text-3xl opacity-30"></i>
@@ -530,6 +532,7 @@
                     </div>
                 </div>
 
+                
                 <div class="bg-white/40 backdrop-blur-md rounded-2xl overflow-hidden border border-white/60 shadow-2xs flex flex-col justify-between hover:bg-white/50 transition">
                     <div class="h-44 bg-teal-900/80 flex items-center justify-center text-teal-100 relative">
                         <i class="fa-solid fa-hand-fist text-3xl opacity-30"></i>
@@ -541,6 +544,7 @@
                     </div>
                 </div>
 
+                
                 <div class="bg-white/40 backdrop-blur-md rounded-2xl overflow-hidden border border-white/60 shadow-2xs flex flex-col justify-between hover:bg-white/50 transition">
                     <div class="h-44 bg-teal-900/80 flex items-center justify-center text-teal-100 relative">
                         <i class="fa-solid fa-microphone-lines text-3xl opacity-30"></i>
@@ -552,6 +556,7 @@
                     </div>
                 </div>
 
+                
                 <div class="bg-white/40 backdrop-blur-md rounded-2xl overflow-hidden border border-white/60 shadow-2xs flex flex-col justify-between hover:bg-white/50 transition">
                     <div class="h-44 bg-teal-900/80 flex items-center justify-center text-teal-100 relative">
                         <i class="fa-solid fa-award text-3xl opacity-30"></i>
@@ -563,6 +568,7 @@
                     </div>
                 </div>
 
+                
                 <div class="bg-white/40 backdrop-blur-md rounded-2xl overflow-hidden border border-white/60 shadow-2xs flex flex-col justify-between hover:bg-white/50 transition">
                     <div class="h-44 bg-teal-900/80 flex items-center justify-center text-teal-100 relative">
                         <i class="fa-solid fa-graduation-cap text-3xl opacity-30"></i>
@@ -574,6 +580,7 @@
                     </div>
                 </div>
 
+                
                 <div class="bg-white/40 backdrop-blur-md rounded-2xl overflow-hidden border border-white/60 shadow-2xs flex flex-col justify-between hover:bg-white/50 transition">
                     <div class="h-44 bg-teal-900/80 flex items-center justify-center text-teal-100 relative">
                         <i class="fa-solid fa-address-book text-3xl opacity-30"></i>
@@ -585,6 +592,7 @@
                     </div>
                 </div>
 
+                
                 <div class="bg-white/40 backdrop-blur-md rounded-2xl overflow-hidden border border-white/60 shadow-2xs flex flex-col justify-between hover:bg-white/50 transition">
                     <div class="h-44 bg-teal-900/80 flex items-center justify-center text-teal-100 relative">
                         <i class="fa-solid fa-users-viewfinder text-3xl opacity-30"></i>
@@ -596,6 +604,7 @@
                     </div>
                 </div>
 
+                
                 <div class="bg-white/40 backdrop-blur-md rounded-2xl overflow-hidden border border-white/60 shadow-2xs flex flex-col justify-between hover:bg-white/50 transition">
                     <div class="h-44 bg-teal-900/80 flex items-center justify-center text-teal-100 relative">
                         <i class="fa-solid fa-apple-whole text-3xl opacity-30"></i>
@@ -607,6 +616,7 @@
                     </div>
                 </div>
 
+                
                 <div class="bg-white/40 backdrop-blur-md rounded-2xl overflow-hidden border border-white/60 shadow-2xs flex flex-col justify-between hover:bg-white/50 transition">
                     <div class="h-44 bg-teal-900/80 flex items-center justify-center text-teal-100 relative">
                         <i class="fa-solid fa-shield-halved text-3xl opacity-30"></i>
@@ -618,6 +628,7 @@
                     </div>
                 </div>
 
+                
                 <div class="bg-white/40 backdrop-blur-md rounded-2xl overflow-hidden border border-white/60 shadow-2xs flex flex-col justify-between hover:bg-white/50 transition">
                     <div class="h-44 bg-teal-900/80 flex items-center justify-center text-teal-100 relative">
                         <i class="fa-solid fa-droplet text-3xl opacity-30"></i>
@@ -629,6 +640,7 @@
                     </div>
                 </div>
 
+                
                 <div class="bg-white/40 backdrop-blur-md rounded-2xl overflow-hidden border border-white/60 shadow-2xs flex flex-col justify-between hover:bg-white/50 transition">
                     <div class="h-44 bg-teal-900/80 flex items-center justify-center text-teal-100 relative">
                         <i class="fa-solid fa-user-check text-3xl opacity-30"></i>
@@ -644,6 +656,32 @@
         </div>
     </section>
 
+    <script>
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const menuIcon = document.getElementById('menu-icon');
+        const mobileLinks = document.querySelectorAll('.mobile-link');
+
+        // Fungsi Toggle Menu
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+            
+            // Mengubah ikon bar / close
+            if (mobileMenu.classList.contains('hidden')) {
+                menuIcon.className = 'fa-solid fa-bars';
+            } else {
+                menuIcon.className = 'fa-solid fa-xmark';
+            }
+        });
+
+        // Menutup menu otomatis jika salah satu link menu diklik
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+                menuIcon.className = 'fa-solid fa-bars';
+            });
+        });
+    </script>
     <footer class="bg-slate-950 text-slate-500 text-center py-6 text-xs border-t border-slate-900">
         <p>&copy; 2026 Aleysa Akustika. Dibuat dengan dedikasi di bidang Kesehatan Masyarakat.</p>
     </footer>
