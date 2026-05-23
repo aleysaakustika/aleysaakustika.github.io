@@ -6,6 +6,7 @@
     <title>Portofolio Aleysa Akustika</title>
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <style>
         /* Menggunakan smooth scroll untuk perpindahan menu */
         html {
@@ -14,6 +15,7 @@
     </style>
 </head>
 <body class="bg-linear-to-br from-teal-50 via-slate-50 to-emerald-50 text-slate-800 font-sans antialiased min-h-screen">
+    
     <div class="fixed inset-0 -z-10 overflow-hidden">
         <div class="absolute inset-0 bg-gradient-to-br from-[#f7f9f9] via-[#eef7f5] to-[#f5fffc]"></div>
         <div class="absolute -right-40 top-40 w-[600px] h-[600px] bg-teal-100 rounded-full opacity-40 blur-3xl"></div>
@@ -24,12 +26,38 @@
             <div class="w-2 h-2 bg-teal-400 rounded-full"></div>
             <div class="w-2 h-2 bg-teal-400 rounded-full"></div>
             <div class="w-2 h-2 bg-teal-400 rounded-full"></div>
-
             <div class="w-2 h-2 bg-teal-400 rounded-full"></div>
             <div class="w-2 h-2 bg-teal-400 rounded-full"></div>
             <div class="w-2 h-2 bg-teal-400 rounded-full"></div>
             <div class="w-2 h-2 bg-teal-400 rounded-full"></div>
-
+            <div class="w-2 h-2 bg-teal-400 rounded-full"></div>
+            <div class="w-2 h-2 bg-teal-400 rounded-full"></div>
+            <div class="w-2 h-2 bg-teal-400 rounded-full"></div>
+            <div class="w-2 h-2 bg-teal-400 rounded-full"></div>
+        </div>
+        <div class="absolute top-28 left-[3%] grid grid-cols-4 gap-3 opacity-20">
+            <div class="w-2 h-2 bg-teal-400 rounded-full"></div>
+            <div class="w-2 h-2 bg-teal-400 rounded-full"></div>
+            <div class="w-2 h-2 bg-teal-400 rounded-full"></div>
+            <div class="w-2 h-2 bg-teal-400 rounded-full"></div>
+            <div class="w-2 h-2 bg-teal-400 rounded-full"></div>
+            <div class="w-2 h-2 bg-teal-400 rounded-full"></div>
+            <div class="w-2 h-2 bg-teal-400 rounded-full"></div>
+            <div class="w-2 h-2 bg-teal-400 rounded-full"></div>
+            <div class="w-2 h-2 bg-teal-400 rounded-full"></div>
+            <div class="w-2 h-2 bg-teal-400 rounded-full"></div>
+            <div class="w-2 h-2 bg-teal-400 rounded-full"></div>
+            <div class="w-2 h-2 bg-teal-400 rounded-full"></div>
+        </div>
+        <div class="absolute bottom-28 left-[3%] grid grid-cols-4 gap-3 opacity-20">
+            <div class="w-2 h-2 bg-teal-400 rounded-full"></div>
+            <div class="w-2 h-2 bg-teal-400 rounded-full"></div>
+            <div class="w-2 h-2 bg-teal-400 rounded-full"></div>
+            <div class="w-2 h-2 bg-teal-400 rounded-full"></div>
+            <div class="w-2 h-2 bg-teal-400 rounded-full"></div>
+            <div class="w-2 h-2 bg-teal-400 rounded-full"></div>
+            <div class="w-2 h-2 bg-teal-400 rounded-full"></div>
+            <div class="w-2 h-2 bg-teal-400 rounded-full"></div>
             <div class="w-2 h-2 bg-teal-400 rounded-full"></div>
             <div class="w-2 h-2 bg-teal-400 rounded-full"></div>
             <div class="w-2 h-2 bg-teal-400 rounded-full"></div>
@@ -37,31 +65,27 @@
         </div>
     </div>
 
-    <nav class="sticky top-0 z-50 bg-white/60 backdrop-blur-lg shadow-xs border-b border-teal-100/30" style="
-    position: fixed !important;
-    width: 100% !important;
-    margin-bottom: 20px;
-">
+    <nav class="sticky top-0 z-50 bg-white/60 backdrop-blur-lg shadow-xs border-b border-teal-100/30" style="position: fixed !important; width: 100% !important; margin-bottom: 20px;">
         <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
             <span class="text-xl font-bold text-teal-700 tracking-wide">Achievement Portfolio</span>
             
-            <div class="hidden md:flex space-x-8 text-sm font-medium text-slate-600">
-                <a href="#tentang" class="hover:text-teal-700 transition">Tentang</a>
-                <a href="#pendidikan" class="hover:text-teal-700 transition">Pendidikan</a>
-                <a href="#pengalaman" class="hover:text-teal-700 transition">Pengalaman</a>
-                <a href="#organisasi" class="hover:text-teal-700 transition">Organisasi</a>
-                <a href="#keahlian" class="hover:text-teal-700 transition">Keahlian</a>
-                <a href="#sertifikasi" class="hover:text-teal-700 transition">Sertifikasi</a>
-                <a href="#galeri" class="hover:text-teal-700 transition">Galeri</a>
+            <div id="desktop-menu" class="hidden md:flex space-x-8 text-sm font-medium text-slate-600">
+                <a href="#tentang" class="hover:text-teal-700 transition nav-link">Tentang</a>
+                <a href="#pendidikan" class="hover:text-teal-700 transition nav-link">Pendidikan</a>
+                <a href="#pengalaman" class="hover:text-teal-700 transition nav-link">Pengalaman</a>
+                <a href="#organisasi" class="hover:text-teal-700 transition nav-link">Organisasi</a>
+                <a href="#keahlian" class="hover:text-teal-700 transition nav-link">Keahlian</a>
+                <a href="#sertifikasi" class="hover:text-teal-700 transition nav-link">Sertifikasi</a>
+                <a href="#galeri" class="hover:text-teal-700 transition nav-link">Galeri</a>
             </div>
 
             <button id="menu-btn" class="md:hidden text-slate-600 hover:text-teal-700 focus:outline-hidden text-xl cursor-pointer">
-                <i id="menu-icon" class="fa-solid fa-xmark"></i>
+                <i id="menu-icon" class="fa-solid fa-bars"></i>
                 <span class="sr-only">Buka Menu Navigasi</span>
             </button>
         </div>
 
-        <div id="mobile-menu" class="md:hidden bg-white/90 backdrop-blur-md border-b border-teal-100/50 px-6 py-4 space-y-3 font-medium text-sm text-slate-600">
+        <div id="mobile-menu" class="hidden md:hidden bg-white/90 backdrop-blur-md border-b border-teal-100/50 px-6 py-4 space-y-3 font-medium text-sm text-slate-600">
             <a href="#tentang" class="block hover:text-teal-700 transition mobile-link">Tentang</a>
             <a href="#pendidikan" class="block hover:text-teal-700 transition mobile-link">Pendidikan</a>
             <a href="#pengalaman" class="block hover:text-teal-700 transition mobile-link">Pengalaman</a>
@@ -72,10 +96,8 @@
         </div>
     </nav>
 
-    <header id="tentang" class="max-w-6xl mx-auto px-6 py-12 md:py-20 grid md:grid-cols-3 gap-12 items-center scroll-mt-16" style="
-    padding-top: 120px;
-">
-        <div class="md:col-span-2 space-y-6 order-2 md:order-1">
+    <header id="tentang" class="max-w-6xl mx-auto px-6 py-12 md:py-20 grid md:grid-cols-3 gap-12 items-center scroll-mt-16" style="padding-top: 120px;">
+        <div class="md:col-span-2 space-y-6 order-2 md:order-1" data-aos="fade-right" data-aos-duration="1000">
             <div class="inline-block bg-teal-500/10 text-teal-800 text-xs px-3 py-1 rounded-full font-semibold uppercase tracking-wider border border-teal-500/20">
                 Profile
             </div>
@@ -93,32 +115,32 @@
             </div>
             
             <p class="text-slate-600 leading-relaxed text-justify mt-4" style="text-justify: inter-word;">
-    Halo! Saya Aleysa, mahasiswi S1 Kesehatan Masyarakat di STIKes Widya Dharma Husada Tangerang yang saat ini sedang menempuh semester 2. Saya punya ketertarikan besar di dunia kesehatan masyarakat, mulai dari bagaimana mengelola administrasi layanannya hingga cara mengedukasi warga agar lebih peduli kesehatan. Sebagai pribadi yang komunikatif, disiplin, dan bertanggung jawab, saya selalu bersemangat untuk terus belajar hal baru—baik secara akademik maupun praktik di lapangan. Lewat portofolio ini, saya ingin membagikan proses belajar dan kontribusi nyata yang bisa saya berikan untuk lingkungan sekitar.
-</p>
+                Halo! Saya Aleysa, mahasiswi S1 Kesehatan Masyarakat di STIKes Widya Dharma Husada Tangerang yang saat ini sedang menempuh semester 2. Saya punya ketertarikan besar di dunia kesehatan masyarakat, mulai dari bagaimana mengelola administrasi layanannya hingga cara mengedukasi warga agar lebih peduli kesehatan. Sebagai pribadi yang komunikatif, disiplin, dan bertanggung jawab, saya selalu bersemangat untuk terus belajar hal baru—baik secara akademik maupun praktik di lapangan. Lewat portofolio ini, saya ingin membagikan proses belajar dan kontribusi nyata yang bisa saya berikan untuk lingkungan sekitar.
+            </p>
 
             <div class="grid grid-cols-2 lg:grid-cols-4 gap-4 pt-2">
-                <div class="bg-white/40 backdrop-blur-md p-4 rounded-xl border border-white/60 shadow-2xs flex items-start gap-3">
+                <div class="bg-white/40 backdrop-blur-md p-4 rounded-xl border border-white/60 shadow-2xs flex items-start gap-3 hover:border-teal-300 transition duration-300">
                     <div class="text-teal-700 bg-teal-500/10 p-2 rounded-lg text-lg"><i class="fa-solid fa-hospital"></i></div>
                     <div>
                         <p class="text-[11px] font-bold text-slate-400 uppercase tracking-wider">Institusi</p>
                         <p class="text-xs font-bold text-slate-800 mt-0.5">STIKes WDH</p>
                     </div>
                 </div>
-                <div class="bg-white/40 backdrop-blur-md p-4 rounded-xl border border-white/60 shadow-2xs flex items-start gap-3">
+                <div class="bg-white/40 backdrop-blur-md p-4 rounded-xl border border-white/60 shadow-2xs flex items-start gap-3 hover:border-teal-300 transition duration-300">
                     <div class="text-teal-700 bg-teal-500/10 p-2 rounded-lg text-lg"><i class="fa-solid fa-book-medical"></i></div>
                     <div>
                         <p class="text-[11px] font-bold text-slate-400 uppercase tracking-wider">Prodi</p>
                         <p class="text-xs font-bold text-slate-800 mt-0.5">Kesmas</p>
                     </div>
                 </div>
-                <div class="bg-white/40 backdrop-blur-md p-4 rounded-xl border border-white/60 shadow-2xs flex items-start gap-3">
+                <div class="bg-white/40 backdrop-blur-md p-4 rounded-xl border border-white/60 shadow-2xs flex items-start gap-3 hover:border-teal-300 transition duration-300">
                     <div class="text-teal-700 bg-teal-500/10 p-2 rounded-lg text-lg"><i class="fa-solid fa-calendar-days"></i></div>
                     <div>
                         <p class="text-[11px] font-bold text-slate-400 uppercase tracking-wider">Semester</p>
                         <p class="text-xs font-bold text-slate-800 mt-0.5">2 (Dua)</p>
                     </div>
                 </div>
-                <div class="bg-white/40 backdrop-blur-md p-4 rounded-xl border border-white/60 shadow-2xs flex items-start gap-3">
+                <div class="bg-white/40 backdrop-blur-md p-4 rounded-xl border border-white/60 shadow-2xs flex items-start gap-3 hover:border-teal-300 transition duration-300">
                     <div class="text-teal-700 bg-teal-500/10 p-2 rounded-lg text-lg"><i class="fa-solid fa-user-check"></i></div>
                     <div>
                         <p class="text-[11px] font-bold text-slate-400 uppercase tracking-wider">Status</p>
@@ -134,13 +156,13 @@
             </div>
         </div>
         
-        <div class="flex justify-center order-1 md:order-2">
+        <div class="flex justify-center order-1 md:order-2" data-aos="fade-left" data-aos-duration="1000">
             <div class="relative w-80 h-[480px]">
                 <div class="absolute -top-6 -left-6 w-24 h-24 border-4 border-teal-100 rounded-3xl"></div>
                 <div class="relative w-full h-full rounded-[40px] overflow-hidden border-4 border-white shadow-2xl bg-gradient-to-br from-teal-500 to-emerald-400 flex items-center justify-center">
                     <div class="absolute -right-20 -bottom-20 w-60 h-60 bg-white/10 rounded-full"></div>
                     <div class="text-center text-white z-10">
-                        <h1 class="text-8xl font-black tracking-widest">AA</h1>
+                        <h1 class="text-8xl font-black tracking-widest animate-pulse">AA</h1>
                         <p class="mt-4 text-lg font-medium opacity-90">Public Health Student</p>
                     </div>
                 </div>
@@ -149,12 +171,13 @@
     </header>
 
     <section id="pendidikan" class="max-w-6xl mx-auto px-6 py-16 border-t border-teal-500/10 scroll-mt-16">
-        <div class="mb-10">
+        <div class="mb-10" data-aos="fade-up">
             <h2 class="text-2xl md:text-3xl font-bold text-slate-950">Pendidikan</h2>
             <p class="text-sm text-slate-500 mt-1">Latar belakang pendidikan formal akademik dan vokasional medis dari jenjang dasar hingga saat ini.</p>
         </div>
+        
         <div class="space-y-4">
-            <div class="flex gap-4 md:gap-6 bg-white/40 backdrop-blur-md p-5 rounded-2xl border border-white/60 shadow-2xs hover:bg-white/60 hover:border-teal-300 transition duration-300">
+            <div class="flex gap-4 md:gap-6 bg-white/40 backdrop-blur-md p-5 rounded-2xl border border-white/60 shadow-2xs hover:bg-white/60 hover:border-teal-300 transition duration-300" data-aos="fade-up" data-aos-delay="100">
                 <div class="text-teal-700 bg-teal-500/10 w-12 h-12 rounded-xl flex items-center justify-center shrink-0 text-xl">
                     <i class="fa-solid fa-university"></i>
                 </div>
@@ -164,7 +187,7 @@
                     <p class="text-sm text-slate-600">STIKes Widya Dharma Husada Tangerang</p>
                 </div>
             </div>
-            <div class="flex gap-4 md:gap-6 bg-white/40 backdrop-blur-md p-5 rounded-2xl border border-white/60 shadow-2xs hover:bg-white/60 hover:border-teal-300 transition duration-300">
+            <div class="flex gap-4 md:gap-6 bg-white/40 backdrop-blur-md p-5 rounded-2xl border border-white/60 shadow-2xs hover:bg-white/60 hover:border-teal-300 transition duration-300" data-aos="fade-up" data-aos-delay="200">
                 <div class="text-teal-700 bg-teal-500/10 w-12 h-12 rounded-xl flex items-center justify-center shrink-0 text-xl">
                     <i class="fa-solid fa-user-nurse"></i>
                 </div>
@@ -174,7 +197,7 @@
                     <p class="text-sm text-slate-600">SMKI Insan Mulia</p>
                 </div>
             </div>
-            <div class="flex gap-4 md:gap-6 bg-white/40 backdrop-blur-md p-5 rounded-2xl border border-white/60 shadow-2xs hover:bg-white/60 hover:border-teal-300 transition duration-300">
+            <div class="flex gap-4 md:gap-6 bg-white/40 backdrop-blur-md p-5 rounded-2xl border border-white/60 shadow-2xs hover:bg-white/60 hover:border-teal-300 transition duration-300" data-aos="fade-up" data-aos-delay="300">
                 <div class="text-teal-700 bg-teal-500/10 w-12 h-12 rounded-xl flex items-center justify-center shrink-0 text-xl">
                     <i class="fa-solid fa-school"></i>
                 </div>
@@ -184,7 +207,7 @@
                     <p class="text-sm text-slate-600">Pendidikan Menengah Pertama</p>
                 </div>
             </div>
-            <div class="flex gap-4 md:gap-6 bg-white/40 backdrop-blur-md p-5 rounded-2xl border border-white/60 shadow-2xs hover:bg-white/60 hover:border-teal-300 transition duration-300">
+            <div class="flex gap-4 md:gap-6 bg-white/40 backdrop-blur-md p-5 rounded-2xl border border-white/60 shadow-2xs hover:bg-white/60 hover:border-teal-300 transition duration-300" data-aos="fade-up" data-aos-delay="400">
                 <div class="text-teal-700 bg-teal-500/10 w-12 h-12 rounded-xl flex items-center justify-center shrink-0 text-xl">
                     <i class="fa-solid fa-graduation-cap"></i>
                 </div>
@@ -198,13 +221,13 @@
     </section>
 
     <section id="pengalaman" class="max-w-6xl mx-auto px-6 py-16 border-t border-teal-500/10 scroll-mt-16">
-        <div class="mb-12">
+        <div class="mb-12" data-aos="fade-up">
             <h2 class="text-2xl md:text-3xl font-bold text-slate-950">Pengalaman Kerja Lapangan</h2>
             <p class="text-sm text-slate-500 mt-1">Rekam jejak praktik klinis terstruktur di berbagai instansi medis dan faskes kesehatan.</p>
         </div>
         
         <div class="grid md:grid-cols-2 gap-6">
-            <div class="bg-white/40 backdrop-blur-md p-6 rounded-2xl border border-white/60 shadow-2xs hover:bg-white/60 hover:border-teal-300 transition duration-300 flex flex-col justify-between">
+            <div class="bg-white/40 backdrop-blur-md p-6 rounded-2xl border border-white/60 shadow-2xs hover:bg-white/60 hover:border-teal-300 transition duration-300 flex flex-col justify-between" data-aos="zoom-in" data-aos-delay="100">
                 <div>
                     <div class="flex justify-between items-start gap-4">
                         <h3 class="font-bold text-slate-900 text-base leading-tight">Asisten Perawat</h3>
@@ -214,7 +237,7 @@
                     <p class="text-xs text-slate-600 mt-3 leading-relaxed">Membantu pelayanan ruang rawat inap dan UGD, pemeriksaan tanda vital, perawatan dan pelepasan infus, perawatan luka, serta patuh terhadap SOP dan standar PPI.</p>
                 </div>
             </div>
-            <div class="bg-white/40 backdrop-blur-md p-6 rounded-2xl border border-white/60 shadow-2xs hover:bg-white/60 hover:border-teal-300 transition duration-300 flex flex-col justify-between">
+            <div class="bg-white/40 backdrop-blur-md p-6 rounded-2xl border border-white/60 shadow-2xs hover:bg-white/60 hover:border-teal-300 transition duration-300 flex flex-col justify-between" data-aos="zoom-in" data-aos-delay="200">
                 <div>
                     <div class="flex justify-between items-start gap-4">
                         <h3 class="font-bold text-slate-900 text-base leading-tight">Asisten Perawat</h3>
@@ -224,7 +247,7 @@
                     <p class="text-xs text-slate-600 mt-3 leading-relaxed">Membantu penanganan gawat darurat dasar, pemeriksaan tanda vital dasar, input data administrasi pasien, edukasi kesehatan, serta membantu operasional apotek dan laboratorium.</p>
                 </div>
             </div>
-            <div class="bg-white/40 backdrop-blur-md p-6 rounded-2xl border border-white/60 shadow-2xs hover:bg-white/60 hover:border-teal-300 transition duration-300 flex flex-col justify-between">
+            <div class="bg-white/40 backdrop-blur-md p-6 rounded-2xl border border-white/60 shadow-2xs hover:bg-white/60 hover:border-teal-300 transition duration-300 flex flex-col justify-between" data-aos="zoom-in" data-aos-delay="300">
                 <div>
                     <div class="flex justify-between items-start gap-4">
                         <h3 class="font-bold text-slate-900 text-base leading-tight">Asisten Perawat</h3>
@@ -234,7 +257,7 @@
                     <p class="text-xs text-slate-600 mt-3 leading-relaxed">Membantu manajemen administrasi pasien, memberikan dukungan pelayanan medis klinik umum dan klinik gigi, serta menangani perawatan luka dan infus dasar.</p>
                 </div>
             </div>
-            <div class="bg-white/40 backdrop-blur-md p-6 rounded-2xl border border-white/60 shadow-2xs hover:bg-white/60 hover:border-teal-300 transition duration-300 flex flex-col justify-between">
+            <div class="bg-white/40 backdrop-blur-md p-6 rounded-2xl border border-white/60 shadow-2xs hover:bg-white/60 hover:border-teal-300 transition duration-300 flex flex-col justify-between" data-aos="zoom-in" data-aos-delay="400">
                 <div>
                     <div class="flex justify-between items-start gap-4">
                         <h3 class="font-bold text-slate-900 text-base leading-tight">Asisten Apoteker</h3>
@@ -248,12 +271,13 @@
     </section>
 
     <section id="organisasi" class="max-w-6xl mx-auto px-6 py-16 border-t border-teal-500/10 scroll-mt-16">
-        <div class="mb-10">
+        <div class="mb-10" data-aos="fade-up">
             <h2 class="text-2xl md:text-3xl font-bold text-slate-950">Pengalaman Organisasi</h2>
             <p class="text-sm text-slate-500 mt-1">Keterlibatan aktif dalam lingkup organisasi kemahasiswaan dan kesiswaan.</p>
         </div>
+        
         <div class="grid md:grid-cols-2 gap-6">
-            <div class="bg-white/40 backdrop-blur-md p-6 rounded-2xl border border-white/60 flex items-start gap-4 shadow-2xs hover:bg-white/60 hover:border-teal-300 transition duration-300">
+            <div class="bg-white/40 backdrop-blur-md p-6 rounded-2xl border border-white/60 flex items-start gap-4 shadow-2xs hover:bg-white/60 hover:border-teal-300 transition duration-300" data-aos="fade-right" data-aos-delay="100">
                 <div class="text-teal-800 bg-teal-500/10 w-12 h-12 rounded-xl flex items-center justify-center shrink-0 text-lg">
                     <i class="fa-solid fa-users-line"></i>
                 </div>
@@ -263,7 +287,7 @@
                     <p class="text-xs text-slate-600 mt-2 leading-relaxed">Berperan aktif dalam menyusun program kerja himpunan, koordinasi antar anggota, serta sukses menjadi bagian dari panitia pelaksana Seminar "Bisik Minat".</p>
                 </div>
             </div>
-            <div class="bg-white/40 backdrop-blur-md p-6 rounded-2xl border border-white/60 flex items-start gap-4 shadow-2xs hover:bg-white/60 hover:border-teal-300 transition duration-300">
+            <div class="bg-white/40 backdrop-blur-md p-6 rounded-2xl border border-white/60 flex items-start gap-4 shadow-2xs hover:bg-white/60 hover:border-teal-300 transition duration-300" data-aos="fade-left" data-aos-delay="200">
                 <div class="text-teal-800 bg-teal-500/10 w-12 h-12 rounded-xl flex items-center justify-center shrink-0 text-lg">
                     <i class="fa-solid fa-id-card-clip"></i>
                 </div>
@@ -277,12 +301,13 @@
     </section>
 
     <section id="keahlian" class="max-w-6xl mx-auto px-6 py-16 border-t border-teal-500/10 scroll-mt-16">
-        <div class="text-center max-w-xl mx-auto mb-12">
+        <div class="text-center max-w-xl mx-auto mb-12" data-aos="fade-up">
             <h2 class="text-2xl md:text-3xl font-bold text-slate-950">Keahlian & Kompetensi</h2>
             <p class="text-sm text-slate-500 mt-2">Kompetensi klinis dasar serta kapasitas analitis di ruang lingkup kesehatan.</p>
         </div>
+        
         <div class="grid md:grid-cols-2 gap-8">
-            <div class="bg-white/40 backdrop-blur-md p-6 rounded-2xl border border-white/60 shadow-2xs">
+            <div class="bg-white/40 backdrop-blur-md p-6 rounded-2xl border border-white/60 shadow-2xs" data-aos="fade-right" data-aos-delay="100">
                 <h3 class="text-base font-bold text-teal-800 mb-4 flex items-center gap-2">
                     <i class="fa-solid fa-briefcase-medical"></i> Kompetensi Teknis (Hard Skill)
                 </h3>
@@ -294,16 +319,17 @@
                     <li class="flex items-start gap-2.5"><i class="fa-solid fa-circle-check text-teal-600 mt-1 text-xs"></i> <span>Dasar PPI (Pencegahan Infeksi) dan K3 medis</span></li>
                 </ul>
             </div>
-            <div class="space-y-6">
+            
+            <div class="space-y-6" data-aos="fade-left" data-aos-delay="200">
                 <div class="bg-white/40 backdrop-blur-md p-6 rounded-2xl border border-white/60 shadow-2xs">
                     <h3 class="text-base font-bold text-teal-800 mb-4 flex items-center gap-2">
                         <i class="fa-solid fa-heart-pulse"></i> Sikap Kerja (Soft Skill)
                     </h3>
                     <div class="flex flex-wrap gap-2">
-                        <span class="bg-white/50 backdrop-blur-xs px-3 py-1.5 rounded-lg text-xs font-semibold text-slate-700 border border-white/40 shadow-2xs">Komunikasi Efektif</span>
-                        <span class="bg-white/50 backdrop-blur-xs px-3 py-1.5 rounded-lg text-xs font-semibold text-slate-700 border border-white/40 shadow-2xs">Kerja Tim</span>
-                        <span class="bg-white/50 backdrop-blur-xs px-3 py-1.5 rounded-lg text-xs font-semibold text-slate-700 border border-white/40 shadow-2xs">Disiplin & Patuh SOP</span>
-                        <span class="bg-slate-50 px-3 py-1.5 rounded-lg text-xs font-semibold text-slate-600 border border-slate-100 shadow-2xs">Empati Pelayanan</span>
+                        <span class="bg-white/50 backdrop-blur-xs px-3 py-1.5 rounded-lg text-xs font-semibold text-slate-700 border border-white/40 shadow-2xs hover:border-teal-400 transition">Komunikasi Efektif</span>
+                        <span class="bg-white/50 backdrop-blur-xs px-3 py-1.5 rounded-lg text-xs font-semibold text-slate-700 border border-white/40 shadow-2xs hover:border-teal-400 transition">Kerja Tim</span>
+                        <span class="bg-white/50 backdrop-blur-xs px-3 py-1.5 rounded-lg text-xs font-semibold text-slate-700 border border-white/40 shadow-2xs hover:border-teal-400 transition">Disiplin & Patuh SOP</span>
+                        <span class="bg-slate-50 px-3 py-1.5 rounded-lg text-xs font-semibold text-slate-600 border border-slate-100 shadow-2xs hover:border-teal-400 transition">Empati Pelayanan</span>
                     </div>
                 </div>
                 <div class="bg-white/40 backdrop-blur-md p-5 rounded-2xl border border-white/60 flex justify-between items-center shadow-2xs">
@@ -318,12 +344,13 @@
     </section>
 
     <section id="sertifikasi" class="max-w-6xl mx-auto px-6 py-16 border-t border-teal-500/10 scroll-mt-16">
-        <div class="mb-10">
+        <div class="mb-10" data-aos="fade-up">
             <h2 class="text-2xl md:text-3xl font-bold text-slate-950">Sertifikasi & Seminar</h2>
             <p class="text-sm text-slate-500 mt-1">Sertifikat resmi dan pengembangan diri profesional yang telah diselesaikan.</p>
         </div>
+        
         <div class="grid md:grid-cols-2 gap-4">
-            <div class="flex gap-4 bg-white/40 backdrop-blur-md p-4 rounded-2xl border border-white/60 shadow-2xs hover:bg-white/60 transition">
+            <div class="flex gap-4 bg-white/40 backdrop-blur-md p-4 rounded-2xl border border-white/60 shadow-2xs hover:bg-white/60 hover:border-teal-300 transition duration-300" data-aos="fade-up" data-aos-delay="50">
                 <div class="text-teal-700 bg-teal-500/10 w-10 h-10 rounded-xl flex items-center justify-center shrink-0 text-lg">
                     <i class="fa-solid fa-award"></i>
                 </div>
@@ -333,7 +360,7 @@
                     <p class="text-[11px] text-slate-600">[Nama Lembaga Penerbit] · [Bulan Tahun Keluar]</p>
                 </div>
             </div>
-            <div class="flex gap-4 bg-white/40 backdrop-blur-md p-4 rounded-2xl border border-white/60 shadow-2xs hover:bg-white/60 transition">
+            <div class="flex gap-4 bg-white/40 backdrop-blur-md p-4 rounded-2xl border border-white/60 shadow-2xs hover:bg-white/60 hover:border-teal-300 transition duration-300" data-aos="fade-up" data-aos-delay="100">
                 <div class="text-teal-700 bg-teal-500/10 w-10 h-10 rounded-xl flex items-center justify-center shrink-0 text-lg">
                     <i class="fa-solid fa-scroll"></i>
                 </div>
@@ -343,7 +370,7 @@
                     <p class="text-[11px] text-slate-600">[Nama Penyelenggara/Universitas] · [Tahun]</p>
                 </div>
             </div>
-            <div class="flex gap-4 bg-white/40 backdrop-blur-md p-4 rounded-2xl border border-white/60 shadow-2xs hover:bg-white/60 transition">
+            <div class="flex gap-4 bg-white/40 backdrop-blur-md p-4 rounded-2xl border border-white/60 shadow-2xs hover:bg-white/60 hover:border-teal-300 transition duration-300" data-aos="fade-up" data-aos-delay="150">
                 <div class="text-teal-700 bg-teal-500/10 w-10 h-10 rounded-xl flex items-center justify-center shrink-0 text-lg">
                     <i class="fa-solid fa-award"></i>
                 </div>
@@ -353,7 +380,7 @@
                     <p class="text-[11px] text-slate-600">[Nama Lembaga Penerbit] · [Bulan Tahun Keluar]</p>
                 </div>
             </div>
-            <div class="flex gap-4 bg-white/40 backdrop-blur-md p-4 rounded-2xl border border-white/60 shadow-2xs hover:bg-white/60 transition">
+            <div class="flex gap-4 bg-white/40 backdrop-blur-md p-4 rounded-2xl border border-white/60 shadow-2xs hover:bg-white/60 hover:border-teal-300 transition duration-300" data-aos="fade-up" data-aos-delay="200">
                 <div class="text-teal-700 bg-teal-500/10 w-10 h-10 rounded-xl flex items-center justify-center shrink-0 text-lg">
                     <i class="fa-solid fa-scroll"></i>
                 </div>
@@ -363,7 +390,7 @@
                     <p class="text-[11px] text-slate-600">[Nama Penyelenggara/Universitas] · [Tahun]</p>
                 </div>
             </div>
-            <div class="flex gap-4 bg-white/40 backdrop-blur-md p-4 rounded-2xl border border-white/60 shadow-2xs hover:bg-white/60 transition">
+            <div class="flex gap-4 bg-white/40 backdrop-blur-md p-4 rounded-2xl border border-white/60 shadow-2xs hover:bg-white/60 hover:border-teal-300 transition duration-300" data-aos="fade-up" data-aos-delay="250">
                 <div class="text-teal-700 bg-teal-500/10 w-10 h-10 rounded-xl flex items-center justify-center shrink-0 text-lg">
                     <i class="fa-solid fa-award"></i>
                 </div>
@@ -373,7 +400,7 @@
                     <p class="text-[11px] text-slate-600">[Nama Lembaga Penerbit] · [Bulan Tahun Keluar]</p>
                 </div>
             </div>
-            <div class="flex gap-4 bg-white/40 backdrop-blur-md p-4 rounded-2xl border border-white/60 shadow-2xs hover:bg-white/60 transition">
+            <div class="flex gap-4 bg-white/40 backdrop-blur-md p-4 rounded-2xl border border-white/60 shadow-2xs hover:bg-white/60 hover:border-teal-300 transition duration-300" data-aos="fade-up" data-aos-delay="300">
                 <div class="text-teal-700 bg-teal-500/10 w-10 h-10 rounded-xl flex items-center justify-center shrink-0 text-lg">
                     <i class="fa-solid fa-scroll"></i>
                 </div>
@@ -385,89 +412,83 @@
             </div>
         </div>
     </section>
-<section id="galeri" class="border-t border-teal-500/10 py-16 scroll-mt-16">
+
+    <section id="galeri" class="border-t border-teal-500/10 py-16 scroll-mt-16">
         <div class="max-w-6xl mx-auto px-6">
-            <div class="text-center max-w-xl mx-auto mb-12">
+            <div class="text-center max-w-xl mx-auto mb-12" data-aos="fade-up">
                 <h2 class="text-2xl md:text-3xl font-bold text-slate-950">Galeri Aktivitas & Pencapaian</h2>
                 <p class="text-sm text-slate-500 mt-2">Seluruh dokumentasi visual kegiatan akademik, praktik lapangan, organisasi, dan prestasi sesuai rekam data asli.</p>
             </div>
 
             <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
 
-                <div class="bg-white/40 backdrop-blur-md rounded-2xl overflow-hidden border border-white/60 shadow-2xs flex flex-col justify-between hover:bg-white/50 transition">
-    <div class="h-44 w-full relative">
-        <span class="absolute top-3 left-3 bg-indigo-700 text-white text-[10px] font-bold px-2 py-0.5 rounded z-10">Organisasi</span>
-        <img src="image/Panitia Seminar Bisik Minat (Bincang Asik Peminatan).jpeg" alt="Panitia Seminar Bisik Minat" class="w-full h-full object-cover">
-    </div>
-    
-    <div class="p-4 flex-1">
-        <h4 class="font-bold text-slate-800 text-xs">Panitia Seminar Bisik Minat</h4>
-        <span class="text-[10px] font-semibold text-teal-700 block mt-0.5">HMJ KESMAS STIKES WDH</span>
-        <p class="text-[11px] text-slate-500 mt-2 leading-relaxed text-justify" style="text-justify: inter-word;">
-            Menjadi bagian dari kepanitiaan Seminar Bisik Minat (Bincang Asik Peminatan) memberikan pengalaman berharga bagi saya dalam bekerja sama dan berkontribusi dalam kegiatan edukatif. Melalui kegiatan bertema “Menggali Potensi dan Minat Diri sebagai Langkah Awal Menentukan Peminatan”, saya ikut berperan dalam mendukung kelancaran acara agar dapat memberikan informasi serta wawasan yang bermanfaat bagi seluruh peserta Program Studi S1 Kesehatan Masyarakat.
-        </p>
-    </div>
-</div>
+                <div class="bg-white/40 backdrop-blur-md rounded-2xl overflow-hidden border border-white/60 shadow-2xs flex flex-col justify-between hover:bg-white/50 hover:border-teal-300 transition duration-300" data-aos="zoom-in" data-aos-delay="50">
+                    <div class="h-44 w-full relative">
+                        <span class="absolute top-3 left-3 bg-indigo-700 text-white text-[10px] font-bold px-2 py-0.5 rounded z-10">Organisasi</span>
+                        <img src="image/Panitia Seminar Bisik Minat (Bincang Asik Peminatan).jpeg" alt="Panitia Seminar Bisik Minat" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-4 flex-1">
+                        <h4 class="font-bold text-slate-800 text-xs">Panitia Seminar Bisik Minat</h4>
+                        <span class="text-[10px] font-semibold text-teal-700 block mt-0.5">HMJ KESMAS STIKES WDH</span>
+                        <p class="text-[11px] text-slate-500 mt-2 leading-relaxed text-justify" style="text-justify: inter-word;">
+                            Menjadi bagian dari kepanitiaan Seminar Bisik Minat (Bincang Asik Peminatan) memberikan pengalaman berharga bagi saya dalam bekerja sama dan berkontribusi dalam kegiatan edukatif. Melalui kegiatan bertema “Menggali Potensi dan Minat Diri sebagai Langkah Awal Menentukan Peminatan”, saya ikut berperan dalam mendukung kelancaran acara agar dapat memberikan informasi serta wawasan yang bermanfaat bagi seluruh peserta Program Studi S1 Kesehatan Masyarakat.
+                        </p>
+                    </div>
+                </div>
 
-<div class="bg-white/40 backdrop-blur-md rounded-2xl overflow-hidden border border-white/60 shadow-2xs flex flex-col justify-between hover:bg-white/50 transition">
-    <div class="h-44 w-full relative">
-        <span class="absolute top-3 left-3 bg-indigo-700 text-white text-[10px] font-bold px-2 py-0.5 rounded z-10">Organisasi</span>
-        <img src="image/LDKO.jpeg" alt="Simulasi Penanganan Kegawatdaruratan" class="w-full h-full object-cover">
-    </div>
-    
-    <div class="p-4 flex-1">
-        <h4 class="font-bold text-slate-800 text-xs">Simulasi Penanganan Kegawatdaruratan: Penatalaksanaan Perdarahan</h4>
-        <span class="text-[10px] font-semibold text-teal-700 block mt-0.5">HMJ KESMAS STIKES WDH</span>
-        <p class="text-[11px] text-slate-500 mt-2 leading-relaxed text-justify" style="text-justify: inter-word;">
-            Demonstrasi teknis penanganan awal kegawatdaruratan pada kasus perdarahan akut dalam kegiatan LDKO (Latihan Dasar Kepemimpinan Organisasi) Himpunan Mahasiswa. Kegiatan ini berfokus pada penerapan teknik pembalutan yang cepat dan tepat untuk membantu mengendalikan perdarahan serta meminimalkan risiko syok hipovolemik sebelum korban mendapatkan penanganan di fasilitas kesehatan.
-        </p>
-    </div>
-</div>
+                <div class="bg-white/40 backdrop-blur-md rounded-2xl overflow-hidden border border-white/60 shadow-2xs flex flex-col justify-between hover:bg-white/50 hover:border-teal-300 transition duration-300" data-aos="zoom-in" data-aos-delay="100">
+                    <div class="h-44 w-full relative">
+                        <span class="absolute top-3 left-3 bg-indigo-700 text-white text-[10px] font-bold px-2 py-0.5 rounded z-10">Organisasi</span>
+                        <img src="image/LDKO.jpeg" alt="Simulasi Penanganan Kegawatdaruratan" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-4 flex-1">
+                        <h4 class="font-bold text-slate-800 text-xs">Simulasi Penanganan Kegawatdaruratan: Penatalaksanaan Perdarahan</h4>
+                        <span class="text-[10px] font-semibold text-teal-700 block mt-0.5">HMJ KESMAS STIKES WDH</span>
+                        <p class="text-[11px] text-slate-500 mt-2 leading-relaxed text-justify" style="text-justify: inter-word;">
+                            Demonstrasi teknis penanganan awal kegawatdaruratan pada kasus perdarahan akut dalam kegiatan LDKO (Latihan Dasar Kepemimpinan Organisasi) Himpunan Mahasiswa. Kegiatan ini berfokus pada penerapan teknik pembalutan yang cepat dan tepat untuk membantu mengendalikan perdarahan serta meminimalkan risiko syok hipovolemik sebelum korban mendapatkan penanganan di fasilitas kesehatan.
+                        </p>
+                    </div>
+                </div>
 
-                <div class="bg-white/40 backdrop-blur-md rounded-2xl overflow-hidden border border-white/60 shadow-2xs flex flex-col justify-between hover:bg-white/50 transition">
+                <div class="bg-white/40 backdrop-blur-md rounded-2xl overflow-hidden border border-white/60 shadow-2xs flex flex-col justify-between hover:bg-white/50 hover:border-teal-300 transition duration-300" data-aos="zoom-in" data-aos-delay="150">
                     <div class="h-44 w-full relative">
                         <span class="absolute top-3 left-3 bg-amber-700 text-white text-[10px] font-bold px-2 py-0.5 rounded">Prestasi</span>
                         <img src="image/Lulusan Terbaik SMK.jpg" alt="Lulusan Terbaik Non-Akademik Angkatan 4" class="w-full h-full object-cover">
                     </div>
-
                     <div class="p-4 flex-1">
                         <h4 class="font-bold text-slate-800 text-xs">Lulusan Terbaik Non-Akademik Angkatan 4</h4>
                         <span class="text-[10px] font-semibold text-teal-700 block mt-0.5">SMKI Insan Mulia</span>
                         <p class="text-[11px] text-slate-500 mt-2 leading-relaxed text-justify" style="text-justify: inter-word;">
-                            Meraih penghargaan sebagai Lulusan Terbaik Non-Akademik di bidang seni dan olahraga, khususnya pencak silat atas dedikasi, prestasi, dan kontribusi aktif selama menempuh pendidikan di SMKI Insan Mulia. Penghargaan ini menjadi bentuk apresiasi atas semangat disiplin, sportivitas, serta komitmen dalam mengembangkan kemampuan dan melestarikan seni bela diri tradisional Indonesia</p>
+                            Meraih penghargaan sebagai Lulusan Terbaik Non-Akademik di bidang seni dan olahraga, khususnya pencak silat atas dedikasi, prestasi, dan kontribusi aktif selama menempuh pendidikan di SMKI Insan Mulia. Penghargaan ini menjadi bentuk apresiasi atas semangat disiplin, sportivitas, serta komitmen dalam mengembangkan kemampuan dan melestarikan seni bela diri tradisional Indonesia.
                         </p>
-                        </div>
+                    </div>
                 </div>
 
-                <div class="bg-white/40 backdrop-blur-md rounded-2xl overflow-hidden border border-white/60 shadow-2xs flex flex-col justify-between hover:bg-white/50 transition">
+                <div class="bg-white/40 backdrop-blur-md rounded-2xl overflow-hidden border border-white/60 shadow-2xs flex flex-col justify-between hover:bg-white/50 hover:border-teal-300 transition duration-300" data-aos="zoom-in" data-aos-delay="200">
                     <div class="h-44 w-full relative">
                         <span class="absolute top-3 left-3 bg-amber-700 text-white text-[10px] font-bold px-2 py-0.5 rounded">Prestasi</span>
                         <img src="image/Juara 2 poomsae taekwondo.jpeg" alt="Juara 2 Kategori poomsae Taekwondo" class="w-full h-full object-cover">
                     </div>
-
                     <div class="p-4 flex-1">
                         <h4 class="font-bold text-slate-800 text-xs">Juara 2 Kategori Poomsae Taekwondo</h4>
                         <span class="text-[10px] font-semibold text-teal-700 block mt-0.5">SMKI Insan Mulia</span>
                         <p class="text-[11px] text-slate-500 mt-2 leading-relaxed text-justify" style="text-justify: inter-word;">Kejuaraan Resmi Piala Bupati Tangerang menjadi pengalaman berharga bagi saya dalam mengembangkan kemampuan di bidang taekwondo. Melalui latihan, disiplin, dan kerja keras, saya berhasil meraih Juara 2 kategori Poomsae sekaligus mendapatkan banyak pelajaran tentang konsistensi, kepercayaan diri, dan sportivitas.</p>
-                    </p>
                     </div>
                 </div>
 
-                 <div class="bg-white/40 backdrop-blur-md rounded-2xl overflow-hidden border border-white/60 shadow-2xs flex flex-col justify-between hover:bg-white/50 transition">
+                <div class="bg-white/40 backdrop-blur-md rounded-2xl overflow-hidden border border-white/60 shadow-2xs flex flex-col justify-between hover:bg-white/50 hover:border-teal-300 transition duration-300" data-aos="zoom-in" data-aos-delay="250">
                     <div class="h-44 w-full relative">
                         <span class="absolute top-3 left-3 bg-indigo-700 text-white text-[10px] font-bold px-2 py-0.5 rounded">Organisasi</span>
                         <img src="image/Hari Guru SMKI.jpeg" alt="Panitia Peringatan hari Guru" class="w-full h-full object-cover">
                     </div>
-
                     <div class="p-4 flex-1">
                         <h4 class="font-bold text-slate-800 text-xs">Panitia Peringatan Hari Guru</h4>
                         <span class="text-[10px] font-semibold text-teal-700 block mt-0.5">OSIS SMKI Insan Mulia</span>
                         <p class="text-[11px] text-slate-500 mt-2 leading-relaxed text-justify" style="text-justify: inter-word;">Menjadi bagian dari panitia peringatan Hari Guru memberikan pengalaman berharga bagi saya dalam bekerja sama, berkoordinasi, dan bertanggung jawab dalam sebuah kegiatan sekolah. Melalui kegiatan ini, saya ikut terlibat dalam proses persiapan hingga pelaksanaan acara sebagai bentuk apresiasi kepada para guru yang telah memberikan ilmu dan inspirasi.</p>
-                    </p>
                     </div>
                 </div>
                 
-                <div class="bg-white/40 backdrop-blur-md rounded-2xl overflow-hidden border border-white/60 shadow-2xs flex flex-col justify-between hover:bg-white/50 transition">
+                <div class="bg-white/40 backdrop-blur-md rounded-2xl overflow-hidden border border-white/60 shadow-2xs flex flex-col justify-between hover:bg-white/50 hover:border-teal-300 transition duration-300" data-aos="zoom-in" data-aos-delay="300">
                     <div class="h-44 w-full relative">
                         <span class="absolute top-3 left-3 bg-indigo-700 text-white text-[10px] font-bold px-2 py-0.5 rounded">Latihan Kepemimpinan</span>
                         <img src="image/LDKS 2023.jpeg" alt="LDKS 2023" class="w-full h-full object-cover">
@@ -475,92 +496,82 @@
                     <div class="p-4 flex-1">
                         <h4 class="font-bold text-slate-800 text-xs">LDKS 2023</h4>
                         <span class="text-[10px] font-semibold text-teal-700 block mt-0.5">OSIS SMKI Insan Mulia</span>
-                        <p class="text-[11px] text-slate-500 mt-2 leading-relaxed text-justify" style="text-justify: inter-word;">Mengikuti kegiatan Latihan Dasar Kepemimpinan Siswa (LDKS) menjadi pengalaman yang membantu saya dalam mengembangkan jiwa kepemimpinan, kerja sama, dan tanggung jawab sebagai bagian dari struktural angkatan. Kegiatan ini memberikan banyak pembelajaran tentang kedisiplinan, komunikasi, serta pentingnya membangun karakter dan solidaritas dalam organisasi.
-                        </p>
-                    </p>
+                        <p class="text-[11px] text-slate-500 mt-2 leading-relaxed text-justify" style="text-justify: inter-word;">Mengikuti kegiatan Latihan Dasar Kepemimpinan Siswa (LDKS) menjadi pengalaman yang membantu saya dalam mengembangkan jiwa kepemimpinan, kerja sama, dan tanggung jawab sebagai bagian dari struktural angkatan. Kegiatan ini memberikan banyak pembelajaran tentang kedisiplinan, komunikasi, serta pentingnya membangun karakter dan solidaritas dalam organisasi.</p>
                     </div>
                 </div>
 
-                <div class="bg-white/40 backdrop-blur-md rounded-2xl overflow-hidden border border-white/60 shadow-2xs flex flex-col justify-between hover:bg-white/50 transition">
+                <div class="bg-white/40 backdrop-blur-md rounded-2xl overflow-hidden border border-white/60 shadow-2xs flex flex-col justify-between hover:bg-white/50 hover:border-teal-300 transition duration-300" data-aos="zoom-in" data-aos-delay="350">
                     <div class="h-44 w-full relative">
                         <span class="absolute top-3 left-3 bg-indigo-700 text-white text-[10px] font-bold px-2 py-0.5 rounded">Organisasi</span>
                         <img src="image/Pelantikan OSIS 2023-2024.jpeg" alt="Panitia Peringatan hari Guru" class="w-full h-full object-cover">
                     </div>
-
                     <div class="p-4 flex-1">
                         <h4 class="font-bold text-slate-800 text-xs">Pelantikan OSIS Periode 2022/2023</h4>
                         <span class="text-[10px] font-semibold text-teal-700 block mt-0.5">OSIS SMKI Insan Mulia</span>
                         <p class="text-[11px] text-slate-500 mt-2 leading-relaxed text-justify" style="text-justify: inter-word;">Mengikuti prosesi pelantikan OSIS menjadi momen berharga bagi saya dalam memulai tanggung jawab sebagai bagian dari kepengurusan organisasi. Kegiatan ini menjadi simbol komitmen, kesiapan, dan amanah untuk menjalankan tugas dengan disiplin, kerja sama, serta semangat berkontribusi bagi lingkungan sekolah.</p>
-                    </p>
                     </div>
                 </div>
 
-                
-<div class="bg-white/40 backdrop-blur-md rounded-2xl overflow-hidden border border-white/60 shadow-2xs flex flex-col justify-between hover:bg-white/50 transition">
-    <div class="h-44 w-full relative">
-        <span class="absolute top-3 left-3 bg-teal-700 text-white text-[10px] font-bold px-2 py-0.5 rounded z-10">Praktik Lapangan</span>
-        <img src="image/PKL TK.jpeg" alt="Panitia Seminar Bisik Minat" class="w-full h-full object-cover">
-    </div>
-    
-    <div class="p-4 flex-1">
-        <h4 class="font-bold text-slate-800 text-xs">PKL TK (Taman Kanak-Kanak)</h4>
-        <span class="text-[10px] font-semibold text-teal-700 block mt-0.5">Taman Kanak Kanak,  Tangerang</span>
-        <p class="text-[11px] text-slate-500 mt-2 leading-relaxed text-justify" style="text-justify: inter-word;">
-            Kegiatan PKL di Taman Kanak-Kanak menjadi pengalaman berharga bagi saya dalam berinteraksi langsung dengan anak usia dini melalui pendekatan edukatif dan menyenangkan. Melalui program pengenalan kesehatan dasar, saya belajar membangun komunikasi yang baik, meningkatkan kepedulian, serta memberikan edukasi sederhana dengan cara yang mudah dipahami oleh anak-anak.
-        </p>
-    </div>
-</div>
-
-    <div class="bg-white/40 backdrop-blur-md rounded-2xl overflow-hidden border border-white/60 shadow-2xs flex flex-col justify-between hover:bg-white/50 transition">
-    <div class="h-44 w-full relative">
-        <span class="absolute top-3 left-3 bg-teal-700 text-white text-[10px] font-bold px-2 py-0.5 rounded z-10">Praktik Lapangan</span>
-        <img src="image/Panti Werdha.jpeg" alt="Panitia Seminar Bisik Minat" class="w-full h-full object-cover">
-    </div>
-    
-    <div class="p-4 flex-1">
-        <h4 class="font-bold text-slate-800 text-xs">PKL Panti Werdha Kasih Ayah Bunda</h4>
-        <span class="text-[10px] font-semibold text-teal-700 block mt-0.5">Panti Werdha Kasih Ayah Bunda, Karawaci Tangerang</span>
-        <p class="text-[11px] text-slate-500 mt-2 leading-relaxed text-justify" style="text-justify: inter-word;">
-            Kegiatan PKL di Panti Werdha Kasih Ayah Bunda memberikan pengalaman berharga bagi saya dalam memahami pentingnya kepedulian dan pelayanan terhadap lansia. Melalui kegiatan asuhan keperawatan gerontik, pendampingan sosial, serta pengecekan kesehatan rutin, saya belajar membangun empati, komunikasi, dan tanggung jawab dalam memberikan perhatian serta dukungan kepada para lansia secara langsung.
-        </p>
-    </div>
-</div>
-
-                
-    <div class="bg-white/40 backdrop-blur-md rounded-2xl overflow-hidden border border-white/60 shadow-2xs flex flex-col justify-between hover:bg-white/50 transition">
+                <div class="bg-white/40 backdrop-blur-md rounded-2xl overflow-hidden border border-white/60 shadow-2xs flex flex-col justify-between hover:bg-white/50 hover:border-teal-300 transition duration-300" data-aos="zoom-in" data-aos-delay="400">
                     <div class="h-44 w-full relative">
-        <span class="absolute top-3 left-3 bg-teal-700 text-white text-[10px] font-bold px-2 py-0.5 rounded z-10">Praktik Lapangan</span>
-        <img src="image/RS Sobirin.jpeg" alt="Panitia Seminar Bisik Minat" class="w-full h-full object-cover">
-    </div>
-    
-    <div class="p-4 flex-1">
-        <h4 class="font-bold text-slate-800 text-xs">PKL di RS Islam Asshobirin</h4>
-        <span class="text-[10px] font-semibold text-teal-700 block mt-0.5">RS Islam Asshobirin Tangserang Selatan</span>
-        <p class="text-[11px] text-slate-500 mt-2 leading-relaxed text-justify" style="text-justify: inter-word;">
-            Kegiatan PKL di RS Islam Asshobirin menjadi pengalaman berharga bagi saya dalam mengenal dunia pelayanan kesehatan secara langsung. Melalui praktik di bidang asisten keperawatan, rekam medis, dan pelayanan rawat inap, saya belajar menerapkan kompetensi vokasional, meningkatkan ketelitian, membangun komunikasi yang baik, serta memahami pentingnya profesionalisme dan kerja sama dalam lingkungan fasilitas kesehatan.
-        </p>
-    </div>
-</div>
+                        <span class="absolute top-3 left-3 bg-teal-700 text-white text-[10px] font-bold px-2 py-0.5 rounded z-10">Praktik Lapangan</span>
+                        <img src="image/PKL TK.jpeg" alt="Panitia Seminar Bisik Minat" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-4 flex-1">
+                        <h4 class="font-bold text-slate-800 text-xs">PKL TK (Taman Kanak-Kanak)</h4>
+                        <span class="text-[10px] font-semibold text-teal-700 block mt-0.5">Taman Kanak Kanak, Tangerang</span>
+                        <p class="text-[11px] text-slate-500 mt-2 leading-relaxed text-justify" style="text-justify: inter-word;">
+                            Kegiatan PKL di Taman Kanak-Kanak menjadi pengalaman berharga bagi saya dalam berinteraksi langsung dengan anak usia dini melalui pendekatan edukatif dan menyenangkan. Melalui program pengenalan kesehatan dasar, saya belajar membangun komunikasi yang baik, meningkatkan kepedulian, serta memberikan edukasi sederhana dengan cara yang mudah dipahami oleh anak-anak.
+                        </p>
+                    </div>
+                </div>
 
-<div class="bg-white/40 backdrop-blur-md rounded-2xl overflow-hidden border border-white/60 shadow-2xs flex flex-col justify-between hover:bg-white/50 transition">
+                <div class="bg-white/40 backdrop-blur-md rounded-2xl overflow-hidden border border-white/60 shadow-2xs flex flex-col justify-between hover:bg-white/50 hover:border-teal-300 transition duration-300" data-aos="zoom-in" data-aos-delay="450">
                     <div class="h-44 w-full relative">
-        <span class="absolute top-3 left-3 bg-teal-700 text-white text-[10px] font-bold px-2 py-0.5 rounded z-10">Praktik Lapangan</span>
-        <img src="image/RS Sobirin 2.jpeg" alt="Panitia Seminar Bisik Minat" class="w-full h-full object-cover">
-    </div>
-    
-    <div class="p-4 flex-1">
-        <h4 class="font-bold text-slate-800 text-xs">PKL di RS Islam Asshobirin</h4>
-        <span class="text-[10px] font-semibold text-teal-700 block mt-0.5">RS Islam Asshobirin Tangserang Selatan</span>
-        <p class="text-[11px] text-slate-500 mt-2 leading-relaxed text-justify" style="text-justify: inter-word;">
-            Kegiatan PKL di RS Islam Asshobirin memberikan pengalaman berharga bagi saya dalam memahami penerapan Pemenuhan Kebutuhan Dasar Manusia (KDM) serta asuhan keperawatan dasar pada anak dan neonatus. Melalui kegiatan ini, saya belajar meningkatkan ketelitian, kepedulian, dan keterampilan dasar keperawatan dalam memberikan pelayanan serta pendampingan kepada pasien dengan penuh tanggung jawab dan empati.
-        </p>
-    </div>
-</div>
+                        <span class="absolute top-3 left-3 bg-teal-700 text-white text-[10px] font-bold px-2 py-0.5 rounded z-10">Praktik Lapangan</span>
+                        <img src="image/Panti Werdha.jpeg" alt="Panitia Seminar Bisik Minat" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-4 flex-1">
+                        <h4 class="font-bold text-slate-800 text-xs">PKL Panti Werdha Kasih Ayah Bunda</h4>
+                        <span class="text-[10px] font-semibold text-teal-700 block mt-0.5">Panti Werdha Kasih Ayah Bunda, Karawaci Tangerang</span>
+                        <p class="text-[11px] text-slate-500 mt-2 leading-relaxed text-justify" style="text-justify: inter-word;">
+                            Kegiatan PKL di Panti Werdha Kasih Ayah Bunda memberikan pengalaman berharga bagi saya dalam memahami pentingnya kepedulian dan pelayanan terhadap lansia. Melalui kegiatan asuhan keperawatan gerontik, pendampingan sosial, serta pengecekan kesehatan rutin, saya belajar membangun empati, komunikasi, dan tanggung jawab dalam memberikan perhatian serta dukungan kepada para lansia secara langsung.
+                        </p>
+                    </div>
+                </div>
 
-<div class="bg-white/40 backdrop-blur-md rounded-2xl overflow-hidden border border-white/60 shadow-2xs flex flex-col justify-between hover:bg-white/50 transition">
+                <div class="bg-white/40 backdrop-blur-md rounded-2xl overflow-hidden border border-white/60 shadow-2xs flex flex-col justify-between hover:bg-white/50 hover:border-teal-300 transition duration-300" data-aos="zoom-in" data-aos-delay="500">
+                    <div class="h-44 w-full relative">
+                        <span class="absolute top-3 left-3 bg-teal-700 text-white text-[10px] font-bold px-2 py-0.5 rounded z-10">Praktik Lapangan</span>
+                        <img src="image/RS Sobirin.jpeg" alt="Panitia Seminar Bisik Minat" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-4 flex-1">
+                        <h4 class="font-bold text-slate-800 text-xs">PKL di RS Islam Asshobirin</h4>
+                        <span class="text-[10px] font-semibold text-teal-700 block mt-0.5">RS Islam Asshobirin Tangserang Selatan</span>
+                        <p class="text-[11px] text-slate-500 mt-2 leading-relaxed text-justify" style="text-justify: inter-word;">
+                            Kegiatan PKL di RS Islam Asshobirin menjadi pengalaman berharga bagi saya dalam mengenal dunia pelayanan kesehatan secara langsung. Melalui praktik di bidang asisten keperawatan, rekam medis, dan pelayanan rawat inap, saya belajar menerapkan kompetensi vokasional, meningkatkan ketelitian, membangun komunikasi yang baik, serta memahami pentingnya profesionalisme dan kerja sama dalam lingkungan fasilitas kesehatan.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="bg-white/40 backdrop-blur-md rounded-2xl overflow-hidden border border-white/60 shadow-2xs flex flex-col justify-between hover:bg-white/50 hover:border-teal-300 transition duration-300" data-aos="zoom-in" data-aos-delay="550">
+                    <div class="h-44 w-full relative">
+                        <span class="absolute top-3 left-3 bg-teal-700 text-white text-[10px] font-bold px-2 py-0.5 rounded z-10">Praktik Lapangan</span>
+                        <img src="image/RS Sobirin 2.jpeg" alt="Panitia Seminar Bisik Minat" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-4 flex-1">
+                        <h4 class="font-bold text-slate-800 text-xs">PKL di RS Islam Asshobirin</h4>
+                        <span class="text-[10px] font-semibold text-teal-700 block mt-0.5">RS Islam Asshobirin Tangserang Selatan</span>
+                        <p class="text-[11px] text-slate-500 mt-2 leading-relaxed text-justify" style="text-justify: inter-word;">
+                            Kegiatan PKL di RS Islam Asshobirin memberikan pengalaman berharga bagi saya dalam memahami penerapan Pemenuhan Kebutuhan Dasar Manusia (KDM) serta asuhan keperawatan dasar pada anak dan neonatus. Melalui kegiatan ini, saya belajar meningkatkan ketelitian, kepedulian, dan keterampilan dasar keperawatan dalam memberikan pelayanan serta pendampingan kepada pasien dengan penuh tanggung jawab dan empati.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="bg-white/40 backdrop-blur-md rounded-2xl overflow-hidden border border-white/60 shadow-2xs flex flex-col justify-between hover:bg-white/50 hover:border-teal-300 transition duration-300" data-aos="zoom-in" data-aos-delay="600">
                     <div class="h-44 w-full relative">
                         <span class="absolute top-3 left-3 bg-amber-700 text-white text-[10px] font-bold px-2 py-0.5 rounded">Performance</span>
-                    <img src="image/Aktrasi Silat SMKI.jpeg" alt="Penampil Atraksi Silat Pelepasan Siswa/i" class="w-full h-full object-cover">
+                        <img src="image/Aktrasi Silat SMKI.jpeg" alt="Penampil Atraksi Silat Pelepasan Siswa/i" class="w-full h-full object-cover">
                     </div>
                     <div class="p-4 flex-1">
                         <h4 class="font-bold text-slate-800 text-xs">Penampil Atraksi Silat Pelepasan Siswa/i</h4>
@@ -569,24 +580,22 @@
                     </div>
                 </div>
 
-<div class="bg-white/40 backdrop-blur-md rounded-2xl overflow-hidden border border-white/60 shadow-2xs flex flex-col justify-between hover:bg-white/50 transition">
+                <div class="bg-white/40 backdrop-blur-md rounded-2xl overflow-hidden border border-white/60 shadow-2xs flex flex-col justify-between hover:bg-white/50 hover:border-teal-300 transition duration-300" data-aos="zoom-in" data-aos-delay="650">
                     <div class="h-44 w-full relative">
                         <span class="absolute top-3 left-3 bg-indigo-700 text-white text-[10px] font-bold px-2 py-0.5 rounded">Organisasi</span>
                         <img src="image/OSIS & MPK Periode 2023-2024.jpeg" alt="Panitia Peringatan hari Guru" class="w-full h-full object-cover">
                     </div>
-
                     <div class="p-4 flex-1">
                         <h4 class="font-bold text-slate-800 text-xs">OSIS-MPK SMKI Insan Mulia Periode 2023/2024</h4>
                         <span class="text-[10px] font-semibold text-teal-700 block mt-0.5">OSIS SMKI Insan Mulia</span>
                         <p class="text-[11px] text-slate-500 mt-2 leading-relaxed text-justify" style="text-justify: inter-word;">Menjadi bagian dari jajaran pengurus aktif OSIS dan Majelis Perwakilan Kelas (MPK) memberikan pengalaman berharga bagi saya dalam belajar kepemimpinan, tanggung jawab, serta kerja sama dalam organisasi sekolah. Melalui kebersamaan dan koordinasi antar pengurus, saya memperoleh banyak pelajaran tentang komunikasi, solidaritas, dan kontribusi aktif dalam mendukung berbagai kegiatan sekolah.</p>
-                    </p>
                     </div>
                 </div>
 
-<div class="bg-white/40 backdrop-blur-md rounded-2xl overflow-hidden border border-white/60 shadow-2xs flex flex-col justify-between hover:bg-white/50 transition">
+                <div class="bg-white/40 backdrop-blur-md rounded-2xl overflow-hidden border border-white/60 shadow-2xs flex flex-col justify-between hover:bg-white/50 hover:border-teal-300 transition duration-300" data-aos="zoom-in" data-aos-delay="700">
                     <div class="h-44 w-full relative">
                         <span class="absolute top-3 left-3 bg-amber-700 text-white text-[10px] font-bold px-2 py-0.5 rounded">Performance</span>
-                    <img src="image/Atraksi Silat Pelantikan Fakultas Baru.jpeg" alt="Penampil Atraksi Silat Pelepasan Siswa/i" class="w-full h-full object-cover">
+                        <img src="image/Atraksi Silat Pelantikan Fakultas Baru.jpeg" alt="Penampil Atraksi Silat Pelepasan Siswa/i" class="w-full h-full object-cover">
                     </div>
                     <div class="p-4 flex-1">
                         <h4 class="font-bold text-slate-800 text-xs">Penampil Atraksi Silat Pelantikan Fakultas Baru di UNIMAR</h4>
@@ -595,35 +604,31 @@
                     </div>
                 </div>
                 
-                <div class="bg-white/40 backdrop-blur-md rounded-2xl overflow-hidden border border-white/60 shadow-2xs flex flex-col justify-between hover:bg-white/50 transition">
+                <div class="bg-white/40 backdrop-blur-md rounded-2xl overflow-hidden border border-white/60 shadow-2xs flex flex-col justify-between hover:bg-white/50 hover:border-teal-300 transition duration-300" data-aos="zoom-in" data-aos-delay="750">
                     <div class="h-44 w-full relative">
                         <span class="absolute top-3 left-3 bg-indigo-700 text-white text-[10px] font-bold px-2 py-0.5 rounded">Organisasi</span>
                         <img src="image/Panitia Acara Public Sppeaking SMK.jpeg" alt="Panitia Acara Public Speaking SMK" class="w-full h-full object-cover">
                     </div>
-
                     <div class="p-4 flex-1">
                         <h4 class="font-bold text-slate-800 text-xs">Panitia Acara Public Speaking SMK</h4>
                         <span class="text-[10px] font-semibold text-teal-700 block mt-0.5">OSIS SMKI Insan Mulia</span>
                         <p class="text-[11px] text-slate-500 mt-2 leading-relaxed text-justify" style="text-justify: inter-word;">Menjadi bagian dari panitia acara Public Speaking SMK memberikan pengalaman berharga bagi saya dalam mengelola kegiatan edukatif dan bekerja sama dalam tim. Melalui kegiatan ini, saya ikut berkontribusi dalam pengelolaan teknis lokakarya yang bertujuan meningkatkan kemampuan komunikasi dan keterampilan berbicara di depan umum bagi para siswa.</p>
-                    </p>
                     </div>
                 </div>
                 
-                <div class="bg-white/40 backdrop-blur-md rounded-2xl overflow-hidden border border-white/60 shadow-2xs flex flex-col justify-between hover:bg-white/50 transition">
+                <div class="bg-white/40 backdrop-blur-md rounded-2xl overflow-hidden border border-white/60 shadow-2xs flex flex-col justify-between hover:bg-white/50 hover:border-teal-300 transition duration-300" data-aos="zoom-in" data-aos-delay="800">
                     <div class="h-44 w-full relative">
                         <span class="absolute top-3 left-3 bg-amber-700 text-white text-[10px] font-bold px-2 py-0.5 rounded">Prestasi</span>
                         <img src="image/Banten National Challenge 1 2024.jpeg" alt="Juara 1 Banten National Challenge 1 2024" class="w-full h-full object-cover">
                     </div>
-
                     <div class="p-4 flex-1">
                         <h4 class="font-bold text-slate-800 text-xs">Juara 1 Banten National Challenge 1 2024</h4>
                         <span class="text-[10px] font-semibold text-teal-700 block mt-0.5">Tapak Suci Muhammadiyah Pagedangan</span>
                         <p class="text-[11px] text-slate-500 mt-2 leading-relaxed text-justify" style="text-justify: inter-word;">Meraih Juara 1 dan Medali Emas pada ajang Banten National Challenge 1 2024 menjadi pengalaman yang sangat berharga bagi saya dalam perjalanan di dunia pencak silat. Bersama Tapak Suci Muhammadiyah Pagedangan, saya belajar tentang disiplin, kerja keras, konsistensi latihan, serta pentingnya menjaga sportivitas dan semangat juang dalam setiap pertandingan. Prestasi ini menjadi motivasi bagi saya untuk terus berkembang dan membawa pencak silat sebagai bagian dari kebanggaan budaya Indonesia.</p>
-                    </p>
                     </div>
                 </div>
                 
-                <div class="bg-white/40 backdrop-blur-md rounded-2xl overflow-hidden border border-white/60 shadow-2xs flex flex-col justify-between hover:bg-white/50 transition">
+                <div class="bg-white/40 backdrop-blur-md rounded-2xl overflow-hidden border border-white/60 shadow-2xs flex flex-col justify-between hover:bg-white/50 hover:border-teal-300 transition duration-300" data-aos="zoom-in" data-aos-delay="850">
                     <div class="h-44 w-full relative">
                         <span class="absolute top-3 left-3 bg-indigo-700 text-white text-[10px] font-bold px-2 py-0.5 rounded">Latihan Kepemimpinan</span>
                         <img src="image/LDKS 2023 Lanjutan.jpeg" alt="LDKS 2023" class="w-full h-full object-cover">
@@ -631,27 +636,23 @@
                     <div class="p-4 flex-1">
                         <h4 class="font-bold text-slate-800 text-xs">LDKS Periode 2023/2024</h4>
                         <span class="text-[10px] font-semibold text-teal-700 block mt-0.5">OSIS SMKI Insan Mulia</span>
-                        <p class="text-[11px] text-slate-500 mt-2 leading-relaxed text-justify" style="text-justify: inter-word;">Kegiatan LDKS Periode 2023/2024 menjadi pengalaman berharga bagi saya dalam memperkuat kemampuan kepemimpinan, kerja sama, dan komunikasi organisasi. Melalui koordinasi lanjutan serta pembekalan materi manajerial OSIS/MPK, saya memperoleh banyak pembelajaran tentang tanggung jawab, pengambilan keputusan, dan pentingnya membangun solidaritas dalam sebuah kepengurusan.
-                        </p>
-                    </p>
+                        <p class="text-[11px] text-slate-500 mt-2 leading-relaxed text-justify" style="text-justify: inter-word;">Kegiatan LDKS Periode 2023/2024 menjadi pengalaman berharga bagi saya dalam memperkuat kemampuan kepemimpinan, kerja sama, dan komunikasi organisasi. Melalui koordinasi lanjutan serta pembekalan materi manajerial OSIS/MPK, saya memperoleh banyak pembelajaran tentang tanggung jawab, pengambilan keputusan, dan pentingnya membangun solidaritas dalam sebuah kepengurusan.</p>
                     </div>
                 </div>
- <div class="bg-white/40 backdrop-blur-md rounded-2xl overflow-hidden border border-white/60 shadow-2xs flex flex-col justify-between hover:bg-white/50 transition">
+
+                <div class="bg-white/40 backdrop-blur-md rounded-2xl overflow-hidden border border-white/60 shadow-2xs flex flex-col justify-between hover:bg-white/50 hover:border-teal-300 transition duration-300" data-aos="zoom-in" data-aos-delay="900">
                     <div class="h-44 w-full relative">
                         <span class="absolute top-3 left-3 bg-amber-700 text-white text-[10px] font-bold px-2 py-0.5 rounded">Prestasi</span>
                         <img src="image/Tapak Suci Muhammadiah.jpeg" alt="Latihan silat di Tapak Suci Muhammadih Pagedangan" class="w-full h-full object-cover">
                     </div>
-
                     <div class="p-4 flex-1">
                         <h4 class="font-bold text-slate-800 text-xs">Latihan silat di Tapak Suci Muhammadih Pagedangan</h4>
                         <span class="text-[10px] font-semibold text-teal-700 block mt-0.5">Tapak Suci Muhammadiyah Pagedangan</span>
                         <p class="text-[11px] text-slate-500 mt-2 leading-relaxed text-justify" style="text-justify: inter-word;">Mengikuti latihan silat di Tapak Suci Muhammadih Pagedangan menjadi bagian penting dalam perjalanan saya mengembangkan kemampuan bela diri, kedisiplinan, dan mental yang kuat. Melalui latihan yang rutin dan konsisten, saya belajar tentang teknik, ketekunan, sportivitas, serta nilai-nilai persaudaraan dan semangat dalam melestarikan seni bela diri tradisional Indonesia.</p>
-                    </p>
                     </div>
                 </div>
                
-                
-                <div class="bg-white/40 backdrop-blur-md rounded-2xl overflow-hidden border border-white/60 shadow-2xs flex flex-col justify-between hover:bg-white/50 transition">
+                <div class="bg-white/40 backdrop-blur-md rounded-2xl overflow-hidden border border-white/60 shadow-2xs flex flex-col justify-between hover:bg-white/50 hover:border-teal-300 transition duration-300" data-aos="zoom-in" data-aos-delay="950">
                     <div class="h-44 bg-teal-900/80 flex items-center justify-center text-teal-100 relative">
                         <i class="fa-solid fa-address-book text-3xl opacity-30"></i>
                         <span class="absolute top-3 left-3 bg-indigo-700 text-white text-[10px] font-bold px-2 py-0.5 rounded">OSIS</span>
@@ -662,8 +663,7 @@
                     </div>
                 </div>
 
-                
-                <div class="bg-white/40 backdrop-blur-md rounded-2xl overflow-hidden border border-white/60 shadow-2xs flex flex-col justify-between hover:bg-white/50 transition">
+                <div class="bg-white/40 backdrop-blur-md rounded-2xl overflow-hidden border border-white/60 shadow-2xs flex flex-col justify-between hover:bg-white/50 hover:border-teal-300 transition duration-300" data-aos="zoom-in" data-aos-delay="1000">
                     <div class="h-44 bg-teal-900/80 flex items-center justify-center text-teal-100 relative">
                         <i class="fa-solid fa-users-viewfinder text-3xl opacity-30"></i>
                         <span class="absolute top-3 left-3 bg-indigo-700 text-white text-[10px] font-bold px-2 py-0.5 rounded">OSIS</span>
@@ -674,8 +674,7 @@
                     </div>
                 </div>
 
-                
-                <div class="bg-white/40 backdrop-blur-md rounded-2xl overflow-hidden border border-white/60 shadow-2xs flex flex-col justify-between hover:bg-white/50 transition">
+                <div class="bg-white/40 backdrop-blur-md rounded-2xl overflow-hidden border border-white/60 shadow-2xs flex flex-col justify-between hover:bg-white/50 hover:border-teal-300 transition duration-300" data-aos="zoom-in" data-aos-delay="1050">
                     <div class="h-44 bg-teal-900/80 flex items-center justify-center text-teal-100 relative">
                         <i class="fa-solid fa-apple-whole text-3xl opacity-30"></i>
                         <span class="absolute top-3 left-3 bg-indigo-700 text-white text-[10px] font-bold px-2 py-0.5 rounded">Hari Guru</span>
@@ -686,8 +685,7 @@
                     </div>
                 </div>
 
-                
-                <div class="bg-white/40 backdrop-blur-md rounded-2xl overflow-hidden border border-white/60 shadow-2xs flex flex-col justify-between hover:bg-white/50 transition">
+                <div class="bg-white/40 backdrop-blur-md rounded-2xl overflow-hidden border border-white/60 shadow-2xs flex flex-col justify-between hover:bg-white/50 hover:border-teal-300 transition duration-300" data-aos="zoom-in" data-aos-delay="1100">
                     <div class="h-44 bg-teal-900/80 flex items-center justify-center text-teal-100 relative">
                         <i class="fa-solid fa-shield-halved text-3xl opacity-30"></i>
                         <span class="absolute top-3 left-3 bg-indigo-700 text-white text-[10px] font-bold px-2 py-0.5 rounded">LDKS</span>
@@ -698,8 +696,7 @@
                     </div>
                 </div>
 
-                
-                <div class="bg-white/40 backdrop-blur-md rounded-2xl overflow-hidden border border-white/60 shadow-2xs flex flex-col justify-between hover:bg-white/50 transition">
+                <div class="bg-white/40 backdrop-blur-md rounded-2xl overflow-hidden border border-white/60 shadow-2xs flex flex-col justify-between hover:bg-white/50 hover:border-teal-300 transition duration-300" data-aos="zoom-in" data-aos-delay="1150">
                     <div class="h-44 bg-teal-900/80 flex items-center justify-center text-teal-100 relative">
                         <i class="fa-solid fa-droplet text-3xl opacity-30"></i>
                         <span class="absolute top-3 left-3 bg-teal-700 text-white text-[10px] font-bold px-2 py-0.5 rounded">Praktik Akademik</span>
@@ -710,8 +707,7 @@
                     </div>
                 </div>
 
-                
-                <div class="bg-white/40 backdrop-blur-md rounded-2xl overflow-hidden border border-white/60 shadow-2xs flex flex-col justify-between hover:bg-white/50 transition">
+                <div class="bg-white/40 backdrop-blur-md rounded-2xl overflow-hidden border border-white/60 shadow-2xs flex flex-col justify-between hover:bg-white/50 hover:border-teal-300 transition duration-300" data-aos="zoom-in" data-aos-delay="1200">
                     <div class="h-44 bg-teal-900/80 flex items-center justify-center text-teal-100 relative">
                         <i class="fa-solid fa-user-check text-3xl opacity-30"></i>
                         <span class="absolute top-3 left-3 bg-teal-700 text-white text-[10px] font-bold px-2 py-0.5 rounded">Instruktur</span>
@@ -726,17 +722,30 @@
         </div>
     </section>
 
+    <footer class="bg-slate-950 text-slate-500 text-center py-6 text-xs border-t border-slate-900">
+        <p>&copy; 2026 Aleysa Akustika. Dibuat dengan dedikasi di bidang Kesehatan Masyarakat.</p>
+    </footer>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script>
+        // Inisialisasi AOS agar SELALU berulang kali animasi muncul saat di-scroll ke atas maupun bawah
+        AOS.init({
+            once: false,       // Mengubah menjadi false agar efek animasi berulang terus saat ditarik ke atas/bawah
+            duration: 800,     // Durasi default gerakan animasi
+            mirror: true       // Mengizinkan animasi memicu efek balik saat elemen di-scroll melewati layar atas
+        });
+
         const menuBtn = document.getElementById('menu-btn');
         const mobileMenu = document.getElementById('mobile-menu');
         const menuIcon = document.getElementById('menu-icon');
         const mobileLinks = document.querySelectorAll('.mobile-link');
+        const desktopLinks = document.querySelectorAll('.nav-link');
 
-        // Fungsi Toggle Menu
+        // Fungsi Toggle Menu Mobile
         menuBtn.addEventListener('click', () => {
             mobileMenu.classList.toggle('hidden');
             
-            // Mengubah ikon bar / close
+            // Mengubah ikon bars / close
             if (mobileMenu.classList.contains('hidden')) {
                 menuIcon.className = 'fa-solid fa-bars';
             } else {
@@ -744,17 +753,28 @@
             }
         });
 
-        // Menutup menu otomatis jika salah satu link menu diklik
+        // Event handler saat menu mobile diklik
         mobileLinks.forEach(link => {
             link.addEventListener('click', () => {
                 mobileMenu.classList.add('hidden');
                 menuIcon.className = 'fa-solid fa-bars';
+                
+                // Memberikan sedikit jeda waktu scroll smooth, lalu memaksa AOS menghitung ulang posisi elemen
+                setTimeout(() => {
+                    AOS.refresh();
+                }, 500);
+            });
+        });
+
+        // Event handler saat menu desktop diklik
+        desktopLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                // Memberikan sedikit jeda waktu agar efek scroll halaman selesai, lalu me-refresh animasi AOS
+                setTimeout(() => {
+                    AOS.refresh();
+                }, 500);
             });
         });
     </script>
-    <footer class="bg-slate-950 text-slate-500 text-center py-6 text-xs border-t border-slate-900">
-        <p>&copy; 2026 Aleysa Akustika. Dibuat dengan dedikasi di bidang Kesehatan Masyarakat.</p>
-    </footer>
-
 </body>
 </html>
