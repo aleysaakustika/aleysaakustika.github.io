@@ -12,6 +12,18 @@
         html {
             scroll-behavior: smooth;
         }
+   @keyframes shimmer {
+        0% { background-position: -200% center; }
+        100% { background-position: 200% center; }
+    }
+    .text-shimmer-black {
+        /* Warna dasar hitam (#1e293b dan #0f172a) dengan kilauan perak/abu-abu terang (#94a3b8) di tengahnya */
+        background: linear-gradient(to right, #0f172a 20%, #94a3b8 40%, #0f172a 60%);
+        background-size: 200% auto;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        animation: shimmer 5s linear infinite;
+    }
     </style>
 </head>
 <body class="bg-gradient-to-br from-teal-50 via-slate-50 to-emerald-50 text-slate-800 font-sans antialiased min-h-screen">
@@ -100,23 +112,29 @@
             <div class="inline-block bg-teal-500/10 text-teal-800 text-xs px-3 py-1 rounded-full font-semibold uppercase tracking-wider border border-teal-500/20">
                 Profile
             </div>
-            <div class="space-y-2">
-                <h1 class="text-4xl md:text-5xl font-extrabold text-slate-900 tracking-tight">
-                    Aleysa Akustika
-                </h1>
-                <div class="flex items-center gap-2 text-lg md:text-xl font-semibold text-teal-700">
-                    <i class="fa-solid fa-graduation-cap"></i>
-                    <span>Mahasiswi S1 Kesehatan Masyarakat</span>
-                </div>
-                <p class="text-base font-medium text-slate-500">
-                    STIKes Widya Dharma Husada Tangerang
-                </p>
-            </div>
+           
+        <div class="space-y-2">
+    <h1 class="text-4xl md:text-6xl font-extrabold tracking-tight text-shimmer-black">Aleysa Akustika</h1>
+    <div class="flex items-center gap-2 text-lg md:text-xl font-semibold text-teal-700">
+        <i class="fa-solid fa-graduation-cap"></i>
+        <span>Mahasiswi S1 Kesehatan Masyarakat</span>
+    </div>
+    
+    <div class="flex flex-wrap items-center justify-between gap-4 w-full">
+        <p class="text-base font-medium text-slate-500">STIKes Widya Dharma Husada Tangerang</p>
+        
+        <a href="image/CV ALEYSA AKUSTIKA 2026.pdf" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center text-xs font-semibold px-4 py-2 rounded-lg border border-teal-600 shadow-sm transition-all duration-300 bg-teal-600 text-white hover:bg-white hover:text-teal-600 hover:border-teal-600">
+    <svg class="w-3.5 h-3.5 mr-1.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path>
+    </svg>
+    Unduh CV
+</a>
+    </div>
+</div>
             
             <p class="text-slate-600 leading-relaxed text-justify mt-4" style="text-justify: inter-word;">
                 Halo! Saya Aleysa, mahasiswi S1 Kesehatan Masyarakat di STIKes Widya Dharma Husada Tangerang yang saat ini sedang menempuh semester 2. Saya punya ketertarikan besar di dunia kesehatan masyarakat, mulai dari bagaimana mengelola administrasi layanannya hingga cara mengedukasi warga agar lebih peduli kesehatan. Sebagai pribadi yang komunikatif, disiplin, dan bertanggung jawab, saya selalu bersemangat untuk terus belajar hal baru—baik secara akademik maupun praktik di lapangan. Lewat portofolio ini, saya ingin membagikan proses belajar dan kontribusi nyata yang bisa saya berikan untuk lingkungan sekitar.
             </p>
-
             <div class="grid grid-cols-2 lg:grid-cols-4 gap-4 pt-2">
                 <div class="bg-white/40 backdrop-blur-md p-4 rounded-xl border border-white/60 shadow-2xs flex items-start gap-3 hover:border-teal-300 transition duration-300">
                     <div class="text-teal-700 bg-teal-500/10 p-2 rounded-lg text-lg"><i class="fa-solid fa-hospital"></i></div>
@@ -446,9 +464,9 @@
 
         <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
 
-            <div class="galeri-card bg-white/40 backdrop-blur-md rounded-2xl overflow-hidden border border-white/60 shadow-2xs flex flex-col justify-between hover:bg-white/50 hover:border-teal-300 transition duration-300" data-id="galeri-1" data-aos="zoom-in" data-aos-delay="50">
+            <div class="galeri-card bg-white/40 backdrop-blur-md rounded-2xl overflow-hidden border border-white/60 shadow-2xs flex flex-col justify-between hover:bg-white hover:border-teal-400 hover:shadow-xl hover:-translate-y-1 transition duration-300" data-id="galeri-1" data-aos="zoom-in" data-aos-delay="50">
                 <div class="h-44 w-full relative">
-                    <span class="absolute top-3 left-3 bg-indigo-700 text-white text-[10px] font-bold px-2 py-0.5 rounded z-10">Organisasi</span>
+                    <span class="absolute top-3 left-3 bg-indigo-700 text-white text-[10px] font-bold px-2 py-0.5 rounded">Organisasi</span>
                     <img src="image/Panitia Seminar Bisik Minat (Bincang Asik Peminatan).jpeg" alt="Panitia Seminar Bisik Minat" class="w-full h-full object-cover">
                 </div>
                 <div class="p-4 flex-1 flex flex-col justify-between">
@@ -470,9 +488,9 @@
                 </div>
             </div>
 
-            <div class="galeri-card bg-white/40 backdrop-blur-md rounded-2xl overflow-hidden border border-white/60 shadow-2xs flex flex-col justify-between hover:bg-white/50 hover:border-teal-300 transition duration-300" data-id="galeri-2" data-aos="zoom-in" data-aos-delay="100">
+            <div class="galeri-card bg-white/40 backdrop-blur-md rounded-2xl overflow-hidden border border-white/60 shadow-2xs flex flex-col justify-between hover:bg-white hover:border-teal-400 hover:shadow-xl hover:-translate-y-1 transition duration-300" data-id="galeri-2" data-aos="zoom-in" data-aos-delay="100">
                 <div class="h-44 w-full relative">
-                    <span class="absolute top-3 left-3 bg-indigo-700 text-white text-[10px] font-bold px-2 py-0.5 rounded z-10">Organisasi</span>
+                    <span class="absolute top-3 left-3 bg-indigo-700 text-white text-[10px] font-bold px-2 py-0.5 rounded">Organisasi</span>
                     <img src="image/LDKO.jpeg" alt="Simulasi Penanganan Kegawatdaruratan" class="w-full h-full object-cover">
                 </div>
                 <div class="p-4 flex-1 flex flex-col justify-between">
@@ -494,7 +512,7 @@
                 </div>
             </div>
 
-            <div class="galeri-card bg-white/40 backdrop-blur-md rounded-2xl overflow-hidden border border-white/60 shadow-2xs flex flex-col justify-between hover:bg-white/50 hover:border-teal-300 transition duration-300" data-id="galeri-3" data-aos="zoom-in" data-aos-delay="150">
+            <div class="galeri-card bg-white/40 backdrop-blur-md rounded-2xl overflow-hidden border border-white/60 shadow-2xs flex flex-col justify-between hover:bg-white hover:border-teal-400 hover:shadow-xl hover:-translate-y-1 transition duration-300" data-id="galeri-3" data-aos="zoom-in" data-aos-delay="150">
                 <div class="h-44 w-full relative">
                     <span class="absolute top-3 left-3 bg-amber-700 text-white text-[10px] font-bold px-2 py-0.5 rounded">Prestasi</span>
                     <img src="image/Lulusan Terbaik SMK.jpg" alt="Lulusan Terbaik Non-Akademik Angkatan 4" class="w-full h-full object-cover">
@@ -518,7 +536,7 @@
                 </div>
             </div>
 
-            <div class="galeri-card bg-white/40 backdrop-blur-md rounded-2xl overflow-hidden border border-white/60 shadow-2xs flex flex-col justify-between hover:bg-white/50 hover:border-teal-300 transition duration-300" data-id="galeri-4" data-aos="zoom-in" data-aos-delay="200">
+            <div class="galeri-card bg-white/40 backdrop-blur-md rounded-2xl overflow-hidden border border-white/60 shadow-2xs flex flex-col justify-between hover:bg-white hover:border-teal-400 hover:shadow-xl hover:-translate-y-1 transition duration-300" data-id="galeri-4" data-aos="zoom-in" data-aos-delay="200">
                 <div class="h-44 w-full relative">
                     <span class="absolute top-3 left-3 bg-amber-700 text-white text-[10px] font-bold px-2 py-0.5 rounded">Prestasi</span>
                     <img src="image/Juara 2 poomsae taekwondo.jpeg" alt="Juara 2 Kategori poomsae Taekwondo" class="w-full h-full object-cover">
@@ -540,7 +558,7 @@
                 </div>
             </div>
 
-            <div class="galeri-card bg-white/40 backdrop-blur-md rounded-2xl overflow-hidden border border-white/60 shadow-2xs flex flex-col justify-between hover:bg-white/50 hover:border-teal-300 transition duration-300" data-id="galeri-5" data-aos="zoom-in" data-aos-delay="250">
+            <div class="galeri-card bg-white/40 backdrop-blur-md rounded-2xl overflow-hidden border border-white/60 shadow-2xs flex flex-col justify-between hover:bg-white hover:border-teal-400 hover:shadow-xl hover:-translate-y-1 transition duration-300" data-id="galeri-5" data-aos="zoom-in" data-aos-delay="250">
                 <div class="h-44 w-full relative">
                     <span class="absolute top-3 left-3 bg-indigo-700 text-white text-[10px] font-bold px-2 py-0.5 rounded">Organisasi</span>
                     <img src="image/Hari Guru SMKI.jpeg" alt="Panitia Peringatan hari Guru" class="w-full h-full object-cover">
@@ -562,7 +580,7 @@
                 </div>
             </div>
 
-            <div class="galeri-card bg-white/40 backdrop-blur-md rounded-2xl overflow-hidden border border-white/60 shadow-2xs flex flex-col justify-between hover:bg-white/50 hover:border-teal-300 transition duration-300" data-id="galeri-6" data-aos="zoom-in" data-aos-delay="300">
+            <div class="galeri-card bg-white/40 backdrop-blur-md rounded-2xl overflow-hidden border border-white/60 shadow-2xs flex flex-col justify-between hover:bg-white hover:border-teal-400 hover:shadow-xl hover:-translate-y-1 transition duration-300" data-id="galeri-6" data-aos="zoom-in" data-aos-delay="300">
                 <div class="h-44 w-full relative">
                     <span class="absolute top-3 left-3 bg-indigo-700 text-white text-[10px] font-bold px-2 py-0.5 rounded">Latihan Kepemimpinan</span>
                     <img src="image/LDKS 2023.jpeg" alt="LDKS 2023" class="w-full h-full object-cover">
@@ -584,7 +602,7 @@
                 </div>
             </div>
 
-            <div class="galeri-card bg-white/40 backdrop-blur-md rounded-2xl overflow-hidden border border-white/60 shadow-2xs flex flex-col justify-between hover:bg-white/50 hover:border-teal-300 transition duration-300" data-id="galeri-7" data-aos="zoom-in" data-aos-delay="350">
+            <div class="galeri-card bg-white/40 backdrop-blur-md rounded-2xl overflow-hidden border border-white/60 shadow-2xs flex flex-col justify-between hover:bg-white hover:border-teal-400 hover:shadow-xl hover:-translate-y-1 transition duration-300" data-id="galeri-7" data-aos="zoom-in" data-aos-delay="350">
                 <div class="h-44 w-full relative">
                     <span class="absolute top-3 left-3 bg-indigo-700 text-white text-[10px] font-bold px-2 py-0.5 rounded">Organisasi</span>
                     <img src="image/Pelantikan OSIS 2023-2024.jpeg" alt="Panitia Peringatan hari Guru" class="w-full h-full object-cover">
@@ -606,9 +624,9 @@
                 </div>
             </div>
 
-            <div class="galeri-card bg-white/40 backdrop-blur-md rounded-2xl overflow-hidden border border-white/60 shadow-2xs flex flex-col justify-between hover:bg-white/50 hover:border-teal-300 transition duration-300" data-id="galeri-8" data-aos="zoom-in" data-aos-delay="400">
+            <div class="galeri-card bg-white/40 backdrop-blur-md rounded-2xl overflow-hidden border border-white/60 shadow-2xs flex flex-col justify-between hover:bg-white hover:border-teal-400 hover:shadow-xl hover:-translate-y-1 transition duration-300" data-id="galeri-8" data-aos="zoom-in" data-aos-delay="400">
                 <div class="h-44 w-full relative">
-                    <span class="absolute top-3 left-3 bg-teal-700 text-white text-[10px] font-bold px-2 py-0.5 rounded z-10">Praktik Lapangan</span>
+                    <span class="absolute top-3 left-3 bg-teal-700 text-white text-[10px] font-bold px-2 py-0.5 rounded">Praktik Lapangan</span>
                     <img src="image/PKL TK.jpeg" alt="Panitia Seminar Bisik Minat" class="w-full h-full object-cover">
                 </div>
                 <div class="p-4 flex-1 flex flex-col justify-between">
@@ -630,9 +648,9 @@
                 </div>
             </div>
 
-            <div class="galeri-card bg-white/40 backdrop-blur-md rounded-2xl overflow-hidden border border-white/60 shadow-2xs flex flex-col justify-between hover:bg-white/50 hover:border-teal-300 transition duration-300" data-id="galeri-9" data-aos="zoom-in" data-aos-delay="450">
+            <div class="galeri-card bg-white/40 backdrop-blur-md rounded-2xl overflow-hidden border border-white/60 shadow-2xs flex flex-col justify-between hover:bg-white hover:border-teal-400 hover:shadow-xl hover:-translate-y-1 transition duration-300" data-id="galeri-9" data-aos="zoom-in" data-aos-delay="450">
                 <div class="h-44 w-full relative">
-                    <span class="absolute top-3 left-3 bg-teal-700 text-white text-[10px] font-bold px-2 py-0.5 rounded z-10">Praktik Lapangan</span>
+                    <span class="absolute top-3 left-3 bg-teal-700 text-white text-[10px] font-bold px-2 py-0.5 rounded">Praktik Lapangan</span>
                     <img src="image/Panti Werdha.jpeg" alt="Panitia Seminar Bisik Minat" class="w-full h-full object-cover">
                 </div>
                 <div class="p-4 flex-1 flex flex-col justify-between">
@@ -654,9 +672,9 @@
                 </div>
             </div>
 
-            <div class="galeri-card bg-white/40 backdrop-blur-md rounded-2xl overflow-hidden border border-white/60 shadow-2xs flex flex-col justify-between hover:bg-white/50 hover:border-teal-300 transition duration-300" data-id="galeri-10" data-aos="zoom-in" data-aos-delay="500">
+            <div class="galeri-card bg-white/40 backdrop-blur-md rounded-2xl overflow-hidden border border-white/60 shadow-2xs flex flex-col justify-between hover:bg-white hover:border-teal-400 hover:shadow-xl hover:-translate-y-1 transition duration-300" data-id="galeri-10" data-aos="zoom-in" data-aos-delay="500">
                 <div class="h-44 w-full relative">
-                    <span class="absolute top-3 left-3 bg-teal-700 text-white text-[10px] font-bold px-2 py-0.5 rounded z-10">Praktik Lapangan</span>
+                    <span class="absolute top-3 left-3 bg-teal-700 text-white text-[10px] font-bold px-2 py-0.5 rounded">Praktik Lapangan</span>
                     <img src="image/RS Sobirin.jpeg" alt="PKL di RS Islam Asshobirin" class="w-full h-full object-cover">
                 </div>
                 <div class="p-4 flex-1 flex flex-col justify-between">
@@ -678,9 +696,9 @@
                 </div>
             </div>
 
-            <div class="galeri-card bg-white/40 backdrop-blur-md rounded-2xl overflow-hidden border border-white/60 shadow-2xs flex flex-col justify-between hover:bg-white/50 hover:border-teal-300 transition duration-300" data-id="galeri-11" data-aos="zoom-in" data-aos-delay="550">
+            <div class="galeri-card bg-white/40 backdrop-blur-md rounded-2xl overflow-hidden border border-white/60 shadow-2xs flex flex-col justify-between hover:bg-white hover:border-teal-400 hover:shadow-xl hover:-translate-y-1 transition duration-300" data-id="galeri-11" data-aos="zoom-in" data-aos-delay="550">
                 <div class="h-44 w-full relative">
-                    <span class="absolute top-3 left-3 bg-teal-700 text-white text-[10px] font-bold px-2 py-0.5 rounded z-10">Praktik Lapangan</span>
+                    <span class="absolute top-3 left-3 bg-teal-700 text-white text-[10px] font-bold px-2 py-0.5 rounded">Praktik Lapangan</span>
                     <img src="image/RS Sobirin 2.jpeg" alt="PKL di RS Islam Asshobirin" class="w-full h-full object-cover">
                 </div>
                 <div class="p-4 flex-1 flex flex-col justify-between">
@@ -702,7 +720,7 @@
                 </div>
             </div>
 
-            <div class="galeri-card bg-white/40 backdrop-blur-md rounded-2xl overflow-hidden border border-white/60 shadow-2xs flex flex-col justify-between hover:bg-white/50 hover:border-teal-300 transition duration-300" data-id="galeri-12" data-aos="zoom-in" data-aos-delay="600">
+            <div class="galeri-card bg-white/40 backdrop-blur-md rounded-2xl overflow-hidden border border-white/60 shadow-2xs flex flex-col justify-between hover:bg-white hover:border-teal-400 hover:shadow-xl hover:-translate-y-1 transition duration-300" data-id="galeri-12" data-aos="zoom-in" data-aos-delay="600">
                 <div class="h-44 w-full relative">
                     <span class="absolute top-3 left-3 bg-amber-700 text-white text-[10px] font-bold px-2 py-0.5 rounded">Performance</span>
                     <img src="image/Aktrasi Silat SMKI.jpeg" alt="Penampil Atraksi Silat Pelepasan Siswa/i" class="w-full h-full object-cover">
@@ -724,7 +742,7 @@
                 </div>
             </div>
 
-            <div class="galeri-card bg-white/40 backdrop-blur-md rounded-2xl overflow-hidden border border-white/60 shadow-2xs flex flex-col justify-between hover:bg-white/50 hover:border-teal-300 transition duration-300" data-id="galeri-13" data-aos="zoom-in" data-aos-delay="650">
+            <div class="galeri-card bg-white/40 backdrop-blur-md rounded-2xl overflow-hidden border border-white/60 shadow-2xs flex flex-col justify-between hover:bg-white hover:border-teal-400 hover:shadow-xl hover:-translate-y-1 transition duration-300" data-id="galeri-13" data-aos="zoom-in" data-aos-delay="650">
                 <div class="h-44 w-full relative">
                     <span class="absolute top-3 left-3 bg-indigo-700 text-white text-[10px] font-bold px-2 py-0.5 rounded">Organisasi</span>
                     <img src="image/OSIS & MPK Periode 2023-2024.jpeg" alt="Panitia Peringatan hari Guru" class="w-full h-full object-cover">
@@ -746,7 +764,7 @@
                 </div>
             </div>
 
-            <div class="galeri-card bg-white/40 backdrop-blur-md rounded-2xl overflow-hidden border border-white/60 shadow-2xs flex flex-col justify-between hover:bg-white/50 hover:border-teal-300 transition duration-300" data-id="galeri-14" data-aos="zoom-in" data-aos-delay="700">
+            <div class="galeri-card bg-white/40 backdrop-blur-md rounded-2xl overflow-hidden border border-white/60 shadow-2xs flex flex-col justify-between hover:bg-white hover:border-teal-400 hover:shadow-xl hover:-translate-y-1 transition duration-300" data-id="galeri-14" data-aos="zoom-in" data-aos-delay="700">
                 <div class="h-44 w-full relative">
                     <span class="absolute top-3 left-3 bg-amber-700 text-white text-[10px] font-bold px-2 py-0.5 rounded">Performance</span>
                     <img src="image/Atraksi Silat Pelantikan Fakultas Baru.jpeg" alt="Penampil Atraksi Silat Pelepasan Siswa/i" class="w-full h-full object-cover">
@@ -768,7 +786,7 @@
                 </div>
             </div>
 
-            <div class="galeri-card bg-white/40 backdrop-blur-md rounded-2xl overflow-hidden border border-white/60 shadow-2xs flex flex-col justify-between hover:bg-white/50 hover:border-teal-300 transition duration-300" data-id="galeri-15" data-aos="zoom-in" data-aos-delay="750">
+            <div class="galeri-card bg-white/40 backdrop-blur-md rounded-2xl overflow-hidden border border-white/60 shadow-2xs flex flex-col justify-between hover:bg-white hover:border-teal-400 hover:shadow-xl hover:-translate-y-1 transition duration-300" data-id="galeri-15" data-aos="zoom-in" data-aos-delay="750">
                 <div class="h-44 w-full relative">
                     <span class="absolute top-3 left-3 bg-indigo-700 text-white text-[10px] font-bold px-2 py-0.5 rounded">Organisasi</span>
                     <img src="image/Panitia Public speaking SMK 2.jpeg" alt="Panitia Acara Public Speaking SMK" class="w-full h-full object-cover">
@@ -790,7 +808,7 @@
                 </div>
             </div>
 
-            <div class="galeri-card bg-white/40 backdrop-blur-md rounded-2xl overflow-hidden border border-white/60 shadow-2xs flex flex-col justify-between hover:bg-white/50 hover:border-teal-300 transition duration-300" data-id="galeri-16" data-aos="zoom-in" data-aos-delay="800">
+            <div class="galeri-card bg-white/40 backdrop-blur-md rounded-2xl overflow-hidden border border-white/60 shadow-2xs flex flex-col justify-between hover:bg-white hover:border-teal-400 hover:shadow-xl hover:-translate-y-1 transition duration-300" data-id="galeri-16" data-aos="zoom-in" data-aos-delay="800">
                 <div class="h-44 w-full relative">
                     <span class="absolute top-3 left-3 bg-amber-700 text-white text-[10px] font-bold px-2 py-0.5 rounded">Prestasi</span>
                     <img src="image/Banten National Challenge 1 2024.jpeg" alt="Juara 1 Banten National Challenge 1 2024" class="w-full h-full object-cover">
@@ -812,7 +830,7 @@
                 </div>
             </div>
 
-            <div class="galeri-card bg-white/40 backdrop-blur-md rounded-2xl overflow-hidden border border-white/60 shadow-2xs flex flex-col justify-between hover:bg-white/50 hover:border-teal-300 transition duration-300" data-id="galeri-17" data-aos="zoom-in" data-aos-delay="850">
+            <div class="galeri-card bg-white/40 backdrop-blur-md rounded-2xl overflow-hidden border border-white/60 shadow-2xs flex flex-col justify-between hover:bg-white hover:border-teal-400 hover:shadow-xl hover:-translate-y-1 transition duration-300" data-id="galeri-17" data-aos="zoom-in" data-aos-delay="850">
                 <div class="h-44 w-full relative">
                     <span class="absolute top-3 left-3 bg-indigo-700 text-white text-[10px] font-bold px-2 py-0.5 rounded">Latihan Kepemimpinan</span>
                     <img src="image/LDKS 2023 Lanjutan.jpeg" alt="LDKS 2023" class="w-full h-full object-cover">
@@ -834,7 +852,7 @@
                 </div>
             </div>
 
-            <div class="galeri-card bg-white/40 backdrop-blur-md rounded-2xl overflow-hidden border border-white/60 shadow-2xs flex flex-col justify-between hover:bg-white/50 hover:border-teal-300 transition duration-300" data-id="galeri-18" data-aos="zoom-in" data-aos-delay="900">
+            <div class="galeri-card bg-white/40 backdrop-blur-md rounded-2xl overflow-hidden border border-white/60 shadow-2xs flex flex-col justify-between hover:bg-white hover:border-teal-400 hover:shadow-xl hover:-translate-y-1 transition duration-300" data-id="galeri-18" data-aos="zoom-in" data-aos-delay="900">
                 <div class="h-44 w-full relative">
                     <span class="absolute top-3 left-3 bg-amber-700 text-white text-[10px] font-bold px-2 py-0.5 rounded">Prestasi</span>
                     <img src="image/Tapak Suci Muhammadiah.jpeg" alt="Latihan silat di Tapak Suci Muhammadih Pagedangan" class="w-full h-full object-cover">
@@ -856,7 +874,7 @@
                 </div>
             </div>
 
-            <div class="galeri-card bg-white/40 backdrop-blur-md rounded-2xl overflow-hidden border border-white/60 shadow-2xs flex flex-col justify-between hover:bg-white/50 hover:border-teal-300 transition duration-300" data-id="galeri-19" data-aos="zoom-in" data-aos-delay="950">
+            <div class="galeri-card bg-white/40 backdrop-blur-md rounded-2xl overflow-hidden border border-white/60 shadow-2xs flex flex-col justify-between hover:bg-white hover:border-teal-400 hover:shadow-xl hover:-translate-y-1 transition duration-300" data-id="galeri-19" data-aos="zoom-in" data-aos-delay="950">
                 <div class="h-44 w-full relative">
                     <span class="absolute top-3 left-3 bg-indigo-700 text-white text-[10px] font-bold px-2 py-0.5 rounded">Organisasi</span>
                     <img src="image/OSIS 2022-2023.jpeg" alt="OSIS 2022/2023" class="w-full h-full object-cover">
@@ -878,7 +896,7 @@
                 </div>
             </div>
 
-            <div class="galeri-card bg-white/40 backdrop-blur-md rounded-2xl overflow-hidden border border-white/60 shadow-2xs flex flex-col justify-between hover:bg-white/50 hover:border-teal-300 transition duration-300" data-id="galeri-20" data-aos="zoom-in" data-aos-delay="1000">
+            <div class="galeri-card bg-white/40 backdrop-blur-md rounded-2xl overflow-hidden border border-white/60 shadow-2xs flex flex-col justify-between hover:bg-white hover:border-teal-400 hover:shadow-xl hover:-translate-y-1 transition duration-300" data-id="galeri-20" data-aos="zoom-in" data-aos-delay="1000">
                 <div class="h-44 w-full relative">
                     <span class="absolute top-3 left-3 bg-indigo-700 text-white text-[10px] font-bold px-2 py-0.5 rounded">Organisasi</span>
                     <img src="image/Hari guru smki periode 2023.jpeg" alt="Panitia Hari Guru" class="w-full h-full object-cover">
@@ -900,7 +918,7 @@
                 </div>
             </div>
 
-            <div class="galeri-card bg-white/40 backdrop-blur-md rounded-2xl overflow-hidden border border-white/60 shadow-2xs flex flex-col justify-between hover:bg-white/50 hover:border-teal-300 transition duration-300" data-id="galeri-21" data-aos="zoom-in" data-aos-delay="1050">
+            <div class="galeri-card bg-white/40 backdrop-blur-md rounded-2xl overflow-hidden border border-white/60 shadow-2xs flex flex-col justify-between hover:bg-white hover:border-teal-400 hover:shadow-xl hover:-translate-y-1 transition duration-300" data-id="galeri-21" data-aos="zoom-in" data-aos-delay="1050">
                 <div class="h-44 w-full relative">
                     <img src="image/Hari Guru Osis Periode 2023.jpeg" alt="Panitia Hari Guru" class="w-full h-full object-cover">
                     <span class="absolute top-3 left-3 bg-indigo-700 text-white text-[10px] font-bold px-2 py-0.5 rounded">Organisasi</span>
@@ -921,7 +939,7 @@
                     </div>
                 </div>
             </div>
-<div class="galeri-card bg-white/40 backdrop-blur-md rounded-2xl overflow-hidden border border-white/60 shadow-2xs flex flex-col justify-between hover:bg-white/50 hover:border-teal-300 transition duration-300" data-aos="zoom-in" data-aos-delay="1100" data-id="galeri-ldks">                    
+<div class="galeri-card bg-white/40 backdrop-blur-md rounded-2xl overflow-hidden border border-white/60 shadow-2xs flex flex-col justify-between hover:bg-white hover:border-teal-400 hover:shadow-xl hover:-translate-y-1 transition duration-300" data-aos="zoom-in" data-aos-delay="1100" data-id="galeri-ldks">                    
     <div class="h-44 bg-teal-900/80 flex items-center justify-center text-teal-100 relative">                        
         <span class="absolute top-3 left-3 bg-indigo-700 text-white text-[10px] font-bold px-2 py-0.5 rounded">Latihan Kepemimpinan</span>                     
         <img src="image/LDKS 2022-2023.jpeg" alt="LDKS 2022/2023" class="w-full h-full object-cover">                    
@@ -945,7 +963,7 @@
     </div>                
 </div>
 
-<div class="galeri-card bg-white/40 backdrop-blur-md rounded-2xl overflow-hidden border border-white/60 shadow-2xs flex flex-col justify-between hover:bg-white/50 hover:border-teal-300 transition duration-300" data-aos="zoom-in" data-aos-delay="800" data-id="galeri-praktik">                    
+<div class="galeri-card bg-white/40 backdrop-blur-md rounded-2xl overflow-hidden border border-white/60 shadow-2xs flex flex-col justify-between hover:bg-white hover:border-teal-400 hover:shadow-xl hover:-translate-y-1 transition duration-300" data-aos="zoom-in" data-aos-delay="800" data-id="galeri-praktik">                    
     <div class="h-44 w-full relative">                        
         <span class="absolute top-3 left-3 bg-teal-700 text-white text-[10px] font-bold px-2 py-0.5 rounded">Praktik Lapangan</span>                    
         <img src="image/Praktik Pemeriksaan Darah .jpeg" alt="Praktik Pemeriksaan Darah" class="w-full h-full object-cover">                    
@@ -969,7 +987,7 @@
     </div>                
 </div>
 
-<div class="galeri-card bg-white/40 backdrop-blur-md rounded-2xl overflow-hidden border border-white/60 shadow-2xs flex flex-col justify-between hover:bg-white/50 hover:border-teal-300 transition duration-300" data-aos="zoom-in" data-aos-delay="1200" data-id="galeri-taekwondo">                    
+<div class="galeri-card bg-white/40 backdrop-blur-md rounded-2xl overflow-hidden border border-white/60 shadow-2xs flex flex-col justify-between hover:bg-white hover:border-teal-400 hover:shadow-xl hover:-translate-y-1 transition duration-300" data-aos="zoom-in" data-aos-delay="1200" data-id="galeri-taekwondo">                    
     <div class="h-44 w-full relative">                        
         <span class="absolute top-3 left-3 bg-teal-700 text-white text-[10px] font-bold px-2 py-0.5 rounded">Instruktur</span>                    
         <img src="image/Asisten pelatih taekwondo di smp insan kamil legok.jpeg" alt="Asisten Pelatih" class="w-full h-full object-cover">                    
@@ -1260,6 +1278,27 @@ document.addEventListener("DOMContentLoaded", function () {
             closeLightbox();
         }
     });
+});
+</script>
+<button id="back-to-top" class="fixed bottom-6 right-6 z-50 bg-teal-600 text-white w-10 h-10 rounded-full shadow-lg flex items-center justify-center opacity-0 pointer-events-none transition-all duration-300 hover:bg-teal-700 cursor-pointer">
+    <i class="fa-solid fa-arrow-up"></i>
+</button>
+
+<script>
+// Pasang ini di dalam tag <script> paling bawah untuk menggantikan baris backToTop yang terpotong
+const backToTopBtn = document.getElementById('back-to-top');
+window.addEventListener('scroll', () => {
+    if (window.scrollY > 400) {
+        backToTopBtn.classList.remove('opacity-0', 'pointer-events-none', 'translate-y-4');
+        backToTopBtn.classList.add('opacity-100', 'translate-y-0');
+    } else {
+        backToTopBtn.classList.add('opacity-0', 'pointer-events-none', 'translate-y-4');
+        backToTopBtn.classList.remove('opacity-100', 'translate-y-0');
+    }
+});
+
+backToTopBtn.addEventListener('click', () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
 });
 </script>
 </body>
