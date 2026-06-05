@@ -1376,6 +1376,34 @@ window.addEventListener('scroll', () => {
 backToTopBtn.addEventListener('click', () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
 });
+
+// Fitur Like dan Love Interaktif di Galeri
+document.querySelectorAll('.galeri-card').forEach(card => {
+    const likeBtn = card.querySelector('.btn-like');
+    const loveBtn = card.querySelector('.btn-love');
+    const likeCount = card.querySelector('.count-like');
+    const loveCount = card.querySelector('.count-love');
+
+    // Berikan angka awal acak biar estetik (opsional)
+    likeCount.innerText = Math.floor(Math.random() * 15) + 5;
+    loveCount.innerText = Math.floor(Math.random() * 20) + 5;
+
+    likeBtn.addEventListener('click', (e) => {
+        e.preventDefault();
+        let count = parseInt(likeCount.innerText);
+        likeCount.innerText = count + 1;
+        likeBtn.classList.remove('text-slate-400');
+        likeBtn.classList.add('text-blue-600', 'font-bold');
+    });
+
+    loveBtn.addEventListener('click', (e) => {
+        e.preventDefault();
+        let count = parseInt(loveCount.innerText);
+        loveCount.innerText = count + 1;
+        loveBtn.classList.remove('text-slate-400');
+        loveBtn.classList.add('text-rose-600', 'font-bold');
+    });
+});
 </script>
 </body>
 </html>
