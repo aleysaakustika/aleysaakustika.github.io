@@ -9,8 +9,9 @@
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <style>
         /* Menggunakan smooth scroll untuk perpindahan menu */
-        html {
+        html, body {
             scroll-behavior: smooth;
+            overflow-x: hidden;
         }
    @keyframes shimmer {
         0% { background-position: -200% center; }
@@ -64,7 +65,7 @@
 }
     </style>
 </head>
-<body class="bg-gradient-to-br from-teal-50 via-slate-50 to-emerald-50 text-slate-800 font-sans antialiased min-h-screen">
+<body class="bg-gradient-to-br from-teal-50 via-slate-50 to-emerald-50 text-slate-800 font-sans antialiased min-h-screen overflow-x-hidden">
     
     <div class="fixed inset-0 -z-10 overflow-hidden">
         <div class="absolute inset-0 bg-gradient-to-br from-[#f7f9f9] via-[#eef7f5] to-[#f5fffc]"></div>
@@ -116,11 +117,7 @@
     </div>
 
     <nav class="fixed top-0 left-0 right-0 z-50 bg-white/60 backdrop-blur-lg shadow-xs border-b border-teal-100/30 w-full">
-    <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center" style="
-    width: 100vw !important;
-    margin-left: 0px;
-    margin-right: 0px;
-">
+    <div class="max-w-6xl mx-auto w-full px-6 py-4 flex justify-between items-center">
 <a href="#" class="flex items-center gap-3 font-bold text-xl text-teal-800">
     
     <!-- ICON KESEHATAN MASYARAKAT (Perisai & Medis) -->
@@ -151,7 +148,7 @@
         <div id="mobile-menu" class="hidden md:hidden bg-white/90 backdrop-blur-md border-b border-teal-100/50 px-6 py-4 space-y-3 font-medium text-sm text-slate-600">
             <a href="#tentang" class="block hover:text-teal-700 transition mobile-link">Tentang</a>
             <a href="#pendidikan" class="block hover:text-teal-700 transition mobile-link">Pendidikan</a>
-            <a href="#akademik" class=""block hover:text-teal-700 transition mobile-link">Akademik</a>
+            <a href="#akademik" class="block hover:text-teal-700 transition mobile-link">Akademik</a>
             <a href="#pengalaman" class="block hover:text-teal-700 transition mobile-link">Pengalaman</a>
             <a href="#organisasi" class="block hover:text-teal-700 transition mobile-link">Organisasi</a>
             <a href="#keahlian" class="block hover:text-teal-700 transition mobile-link">Keahlian</a>
@@ -343,7 +340,7 @@
         </div>
 
         <!-- 3. GRID KARTU PROYEK AKADEMIK (LENGKAP 5 KARTU) -->
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div id="project" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             
             <!-- Proyek 1: Esai Ilmiah / Karya Tulis -->
             <div class="bg-white dark:bg-slate-800 rounded-3xl overflow-hidden shadow-xs hover:shadow-xl transition-all duration-300 border border-slate-100 dark:border-slate-700/50 flex flex-col justify-between group" data-aos="fade-up" data-aos-delay="100">
@@ -365,25 +362,30 @@
                 </div>
             </div>
 
-            <!-- Proyek 2: Media KIE / Poster Kesehatan -->
-            <div class="bg-white dark:bg-slate-800 rounded-3xl overflow-hidden shadow-xs hover:shadow-xl transition-all duration-300 border border-slate-100 dark:border-slate-700/50 flex flex-col justify-between group" data-aos="fade-up" data-aos-delay="200">
-                <div class="p-6">
-                    <div class="flex justify-between items-center mb-4">
-                        <span class="text-xs font-semibold px-2.5 py-1 bg-purple-50 dark:bg-purple-950/40 text-purple-700 dark:text-purple-400 rounded-lg border border-purple-100 dark:border-purple-900/30">Epidemiologi Penyakit</span>
-                        <span class="text-[10px] font-bold text-teal-600 bg-teal-50 dark:bg-teal-950/30 dark:text-teal-400 px-2 py-0.5 rounded-md border border-teal-200 dark:border-teal-900/40">🚀 Publikasi Kampus</span>
-                    </div>
-                    <h3 class="text-lg font-bold text-slate-800 dark:text-white group-hover:text-teal-600 transition-colors line-clamp-2">Desain Infografis Interaktif: Rantai Penularan Demam Berdarah Dengue (DBD)</h3>
-                    <p class="mt-3 text-xs md:text-sm text-slate-500 dark:text-slate-400 line-clamp-4 leading-relaxed">
-                        Pengembangan media KIE visual berbasis vektor untuk mempermudah masyarakat awam memahami siklus hidup nyamuk Aedes Aegypti dan metode pemberantasan sarang nyamuk (PSN) 3M Plus.
-                    </p>
-                </div>
-                <div class="p-6 pt-0">
-                    <a href="#" target="_blank" class="w-full flex items-center justify-center gap-2 bg-slate-50 dark:bg-slate-700/50 hover:bg-teal-600 hover:text-white dark:hover:bg-teal-600 text-slate-700 dark:text-slate-300 text-xs font-bold py-3 px-4 rounded-xl transition-all duration-300 border border-slate-100 dark:border-slate-700">
-                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"></path></svg>
-                        Lihat Desain Canva
-                    </a>
-                </div>
-            </div>
+           <div class="sertifikat-card bg-white dark:bg-slate-800 rounded-3xl overflow-hidden shadow-xs hover:shadow-xl transition-all duration-300 border border-slate-100 dark:border-slate-700/50 flex flex-col justify-between group cursor-pointer" 
+     data-image="image/Infografis_InteraktifDBD.png" 
+     data-title="Desain Infografis Interaktif: Rantai Penularan Demam Berdarah Dengue (DBD)"
+     data-aos="fade-up" data-aos-delay="200">
+    
+    <div class="p-6">
+        <div class="flex justify-between items-center mb-4">
+            <span class="text-xs font-semibold px-2.5 py-1 bg-purple-50 dark:bg-purple-950/40 text-purple-700 dark:text-purple-400 rounded-lg border border-purple-100 dark:border-purple-900/30">Epidemiologi Penyakit</span>
+            <span class="text-[10px] font-bold text-teal-600 bg-teal-50 dark:bg-teal-950/30 dark:text-teal-400 px-2 py-0.5 rounded-md border border-teal-200 dark:border-teal-900/40">🚀 Publikasi Kampus</span>
+        </div>
+        <h3 class="text-lg font-bold text-slate-800 dark:text-white group-hover:text-teal-600 transition-colors line-clamp-2">Desain Infografis Interaktif: Rantai Penularan Demam Berdarah Dengue (DBD)</h3>
+        <p class="mt-3 text-xs md:text-sm text-slate-500 dark:text-slate-400 line-clamp-4 leading-relaxed">
+            Pengembangan media KIE visual berbasis vektor untuk mempermudah masyarakat awam memahami siklus hidup nyamuk Aedes Aegypti dan metode pemberantasan sarang nyamuk (PSN) 3M Plus.
+        </p>
+    </div>
+    
+    <div class="p-6 pt-0">
+        <!-- Tombol diubah menjadi div atau button biasa (bukan tag 'a' href), sehingga murni dikendalikan oleh fungsi click JavaScript pop-up -->
+        <div class="w-full flex items-center justify-center gap-2 bg-slate-50 dark:bg-slate-700/50 hover:bg-teal-600 hover:text-white dark:hover:bg-teal-600 text-slate-700 dark:text-slate-300 text-xs font-bold py-3 px-4 rounded-xl transition-all duration-300 border border-slate-100 dark:border-slate-700">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"></path></svg>
+            Lihat Desain Infografis
+        </div>
+    </div>
+</div>
 
             <!-- Proyek 3: Olah Data / Biostatistik -->
             <div class="bg-white dark:bg-slate-800 rounded-3xl overflow-hidden shadow-xs hover:shadow-xl transition-all duration-300 border border-slate-100 dark:border-slate-700/50 flex flex-col justify-between group" data-aos="fade-up" data-aos-delay="300">
@@ -1602,7 +1604,7 @@ document.querySelectorAll('.galeri-card').forEach(card => {
 });
 document.addEventListener("DOMContentLoaded", () => {
     const projectCountEl = document.getElementById('project-count');
-    const totalProjects = document.querySelectorAll('#akademik .grid-cols-1 > div').length; 
+    const totalProjects = document.getElementById('project').children.length; 
 
     let animated = false;
 
@@ -1629,6 +1631,32 @@ document.addEventListener("DOMContentLoaded", () => {
     window.addEventListener('scroll', startCounter);
     startCounter(); 
 });
+
+document.addEventListener("DOMContentLoaded", () => {
+    // 1. Matikan klik kanan khusus pada semua gambar
+    const images = document.querySelectorAll('img');
+    images.forEach(img => {
+        img.addEventListener('contextmenu', (e) => {
+            e.preventDefault();
+        });
+    });
+
+    // 2. Matikan klik kanan pada kartu sertifikat & akademik agar pop-up aman
+    const protectedCards = document.querySelectorAll('.sertifikat-card, #akademik, #sertifikasi');
+    protectedCards.forEach(card => {
+        card.addEventListener('contextmenu', (e) => {
+            e.preventDefault();
+        });
+    });
+    
+    // 3. Tambahan: Matikan klik kanan pada modal pop-up gambar saat terbuka
+    // (Sesuaikan class '.modal' atau '.pop-up' dengan nama class pembungkus pop-up Anda)
+    const modalImageContainer = document.querySelector('.sertifikat-card'); 
+    if(modalImageContainer) {
+        modalImageContainer.addEventListener('contextmenu', (e) => e.preventDefault());
+    }
+});
 </script>
+
 </body>
 </html>
