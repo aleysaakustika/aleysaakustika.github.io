@@ -63,7 +63,10 @@
         left: -150%;
     }
 }
-
+.nav-link.active, .mobile-link.active {
+    color: #0f766e !important; /* Warna teal-700 */
+    font-weight: 700;          /* Membuat teks menjadi tebal (Bold) */
+}
     </style>
 </head>
 <body class="bg-gradient-to-br from-teal-50 via-slate-50 to-emerald-50 text-slate-800 font-sans antialiased min-h-screen overflow-x-hidden">
@@ -345,24 +348,24 @@
         <div id="project" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             
             <!-- Proyek 1: Esai Ilmiah / Karya Tulis -->
-            <div class="bg-white dark:bg-slate-800 rounded-3xl overflow-hidden shadow-xs hover:shadow-xl transition-all duration-300 border border-slate-100 dark:border-slate-700/50 flex flex-col justify-between group" data-aos="fade-up" data-aos-delay="100">
-                <div class="p-6">
-                    <div class="flex justify-between items-center mb-4">
-                        <span class="text-xs font-semibold px-2.5 py-1 bg-amber-50 dark:bg-amber-950/40 text-amber-700 dark:text-amber-400 rounded-lg border border-amber-100 dark:border-amber-900/30">Dasar Promosi Kesehatan</span>
-                        <span class="text-[10px] font-bold text-emerald-600 bg-emerald-50 dark:bg-emerald-950/30 dark:text-emerald-400 px-2 py-0.5 rounded-md border border-emerald-200 dark:border-emerald-900/40">✔️ Nilai A</span>
-                    </div>
-                    <h3 class="text-lg font-bold text-slate-800 dark:text-white group-hover:text-teal-600 transition-colors line-clamp-2">Analisis Strategi Digital Edukasi Pencegahan Stunting pada Gen-Z</h3>
-                    <p class="mt-3 text-xs md:text-sm text-slate-500 dark:text-slate-400 line-clamp-4 leading-relaxed">
-                        Mini-research yang merancang model kampanye media sosial interaktif untuk meningkatkan kesadaran remaja putri mengenai anemia dan dampaknya pada stunting di masa depan.
-                    </p>
-                </div>
-                <div class="p-6 pt-0">
-                    <a href="#" target="_blank" class="w-full flex items-center justify-center gap-2 bg-slate-50 dark:bg-slate-700/50 hover:bg-teal-600 hover:text-white dark:hover:bg-teal-600 text-slate-700 dark:text-slate-300 text-xs font-bold py-3 px-4 rounded-xl transition-all duration-300 border border-slate-100 dark:border-slate-700">
-                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
-                        Baca Esai Lengkap (PDF)
-                    </a>
-                </div>
-            </div>
+            <div class="bg-white dark:bg-slate-800 rounded-3xl overflow-hidden shadow-xs hover:shadow-xl transition-all duration-300 border border-slate-100 dark:border-slate-700/50 flex flex-col justify-between group" data-aos="fade-up" data-aos-delay="500">
+    <div class="p-6">
+        <div class="flex justify-between items-center mb-4">
+            <span class="text-xs font-semibold px-2.5 py-1 bg-rose-50 dark:bg-rose-950/40 text-rose-700 dark:text-rose-400 rounded-lg border border-rose-100 dark:border-rose-900/30">Kesehatan Global</span>
+            <span class="text-[10px] font-bold text-emerald-600 bg-emerald-50 dark:bg-emerald-950/30 dark:text-emerald-400 px-2 py-0.5 rounded-md border border-emerald-200 dark:border-emerald-900/40">🔬 Kerja Mandiri</span>
+        </div>
+        <h3 class="text-lg font-bold text-slate-800 dark:text-white group-hover:text-teal-600 transition-colors line-clamp-2">Analisis Kasus Berbasis Literatur: Faktor Lingkungan & Komplikasi Kehamilan</h3>
+        <p class="mt-3 text-xs md:text-sm text-slate-500 dark:text-slate-400 line-clamp-4 leading-relaxed">
+            Kajian berbasis literatur ilmiah global mengenai korelasi paparan polusi udara (PM2.5, NO₂), bahan kimia pengganggu endokrin (EDCs), dan logam berat terhadap peningkatan risiko preeklampsia serta gangguan plasenta maternal.
+        </p>
+    </div>
+    <div class="p-6 pt-0">
+        <a href="https://www.researchgate.net/" target="_blank" class="w-full flex items-center justify-center gap-2 bg-slate-50 dark:bg-slate-700/50 hover:bg-teal-600 hover:text-white dark:hover:bg-teal-600 text-slate-700 dark:text-slate-300 text-xs font-bold py-3 px-4 rounded-xl transition-all duration-300 border border-slate-100 dark:border-slate-700">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
+            Baca Laporan Lengkap (ResearchGate)
+        </a>
+    </div>
+</div>
 
            <div class="sertifikat-card bg-white dark:bg-slate-800 rounded-3xl overflow-hidden shadow-xs hover:shadow-xl transition-all duration-300 border border-slate-100 dark:border-slate-700/50 flex flex-col justify-between group cursor-pointer" 
      data-image="image/Infografis_InteraktifDBD.png" 
@@ -1916,6 +1919,39 @@ document.addEventListener("DOMContentLoaded", () => {
         modalImageContainer.addEventListener('contextmenu', (e) => e.preventDefault());
     }
 });
+// --- LOGIKA SCROLL SPY (NAVIGASI AKTIF OTOMATIS) ---
+const sections = document.querySelectorAll('header[id], section[id]');
+const navLinks = document.querySelectorAll('.nav-link');
+const mobLinks = document.querySelectorAll('.mobile-link');
+
+function scrollSpy() {
+    // Ambil posisi scroll saat ini ditambah sedikit offset (misal 150px) agar transisi warna pas sebelum mentok ke atas
+    const scrollPos = window.scrollY || document.documentElement.scrollTop;
+
+    sections.forEach(section => {
+        // Cek posisi atas dan bawah dari setiap section halaman
+        const sectionTop = section.offsetTop - 150; 
+        const sectionHeight = section.offsetHeight;
+        const sectionId = section.getAttribute('id');
+
+        if (scrollPos >= sectionTop && scrollPos < sectionTop + sectionHeight) {
+            // 1. Bersihkan class 'active' di menu desktop & mobile
+            navLinks.forEach(link => link.classList.remove('active'));
+            mobLinks.forEach(link => link.classList.remove('active'));
+
+            // 2. Tambahkan class 'active' pada link yang sesuai dengan ID section saat ini
+            const activeDesktopLink = document.querySelector(`.nav-link[href="#${sectionId}"]`);
+            const activeMobileLink = document.querySelector(`.mobile-link[href="#${sectionId}"]`);
+            
+            if (activeDesktopLink) activeDesktopLink.classList.add('active');
+            if (activeMobileLink) activeMobileLink.classList.add('active');
+        }
+    });
+}
+
+// Jalankan fungsi saat halaman di-scroll dan saat pertama kali halaman dimuat
+window.addEventListener('scroll', scrollSpy);
+window.addEventListener('DOMContentLoaded', scrollSpy);
 </script>
 
 </body>
